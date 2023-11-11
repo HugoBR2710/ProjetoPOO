@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Museu",
+    "\\Museu\\Museu"
   ],
-  "SelectedNode": "\\C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO",
+  "SelectedNode": "\\Museu\\Museu\\Limpeza.cs",
   "PreviewInSolutionExplorer": false
 }

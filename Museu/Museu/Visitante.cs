@@ -9,6 +9,8 @@ namespace Museu
 
         public Visitante(string nome, int idade, string motivoVisita) : base(nome, idade)
         {
+            Nome = nome;
+            Idade = idade;
             MotivoVisita = motivoVisita;
         }
 

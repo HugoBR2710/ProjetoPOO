@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace Museu
 {
@@ -17,3 +18,4 @@ namespace Museu
         }
     }
 }
+ 
