@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7F1CD1B0-29E6-4CC4-9908-176AB7FD7B09}</ProjectGuid>
+    <ProjectGuid>{CDEC3909-FDCC-472D-9A31-F99351591B93}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Museu</RootNamespace>
     <AssemblyName>Museu</AssemblyName>

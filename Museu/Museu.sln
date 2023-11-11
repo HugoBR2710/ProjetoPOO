@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33529.622
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Museu", "Museu\Museu.csproj", "{7F1CD1B0-29E6-4CC4-9908-176AB7FD7B09}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Museu", "Museu\Museu.csproj", "{CDEC3909-FDCC-472D-9A31-F99351591B93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7F1CD1B0-29E6-4CC4-9908-176AB7FD7B09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F1CD1B0-29E6-4CC4-9908-176AB7FD7B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F1CD1B0-29E6-4CC4-9908-176AB7FD7B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F1CD1B0-29E6-4CC4-9908-176AB7FD7B09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDEC3909-FDCC-472D-9A31-F99351591B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDEC3909-FDCC-472D-9A31-F99351591B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDEC3909-FDCC-472D-9A31-F99351591B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDEC3909-FDCC-472D-9A31-F99351591B93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {641DB52B-F9DB-4B86-9D6B-CA16DBAEA948}
+		SolutionGuid = {8CCCF55E-E0B0-4A9C-AE8F-DE497D1A2F48}
 	EndGlobalSection
 EndGlobal
