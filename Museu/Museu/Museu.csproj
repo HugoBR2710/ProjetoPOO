@@ -43,8 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Curadores.cs" />
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="Limpeza.cs" />
+    <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Restauro.cs" />
+    <Compile Include="Seguranca.cs" />
+    <Compile Include="Visitante.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
