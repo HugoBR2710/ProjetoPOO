@@ -7,6 +7,8 @@ namespace Museu
     {
         public string Cargo { get; set; }
 
+        public decimal Salario { get; set; }
+
         public Funcionario(string nome, int idade, string cargo) : base(nome, idade)
         {
             Cargo = cargo;

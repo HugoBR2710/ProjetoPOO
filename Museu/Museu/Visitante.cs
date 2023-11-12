@@ -14,6 +14,13 @@ namespace Museu
             MotivoVisita = motivoVisita;
         }
 
+
+        //método para mostrar mostrar a sala onde está o visitante
+        public void VisitarSala(Sala sala)
+        {
+            Console.WriteLine($"Sou @ {Nome} e estou a visitar {sala.Nome}");
+        }
+
         public override void Apresentar()
         {
             Console.WriteLine($"Olá, sou um visitante chamado {Nome}, tenho {Idade} anos e estou aqui para {MotivoVisita}.");
