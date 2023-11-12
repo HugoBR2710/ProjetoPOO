@@ -5,3 +5,10 @@ C:\Users\hugos\source\repos\ProjetoPOO\Museu\Museu\bin\Debug\Museu.exe
 C:\Users\hugos\source\repos\ProjetoPOO\Museu\Museu\bin\Debug\Museu.pdb
 C:\Users\hugos\source\repos\ProjetoPOO\Museu\Museu\obj\Debug\Museu.exe
 C:\Users\hugos\source\repos\ProjetoPOO\Museu\Museu\obj\Debug\Museu.pdb
+C:\Users\Jorge\Desktop\ProjetoPOO\Museu\Museu\obj\Debug\Museu.csproj.AssemblyReference.cache
+C:\Users\Jorge\Desktop\ProjetoPOO\Museu\Museu\obj\Debug\Museu.csproj.CoreCompileInputs.cache
+C:\Users\Jorge\Desktop\ProjetoPOO\Museu\Museu\obj\Debug\Museu.exe
+C:\Users\Jorge\Desktop\ProjetoPOO\Museu\Museu\obj\Debug\Museu.pdb
+C:\Users\Jorge\Desktop\ProjetoPOO\Museu\Museu\bin\Debug\Museu.exe.config
+C:\Users\Jorge\Desktop\ProjetoPOO\Museu\Museu\bin\Debug\Museu.exe
+C:\Users\Jorge\Desktop\ProjetoPOO\Museu\Museu\bin\Debug\Museu.pdb
