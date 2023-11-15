@@ -15,7 +15,7 @@ namespace Museu
         }
 
 
-        //método para mostrar mostrar a sala onde está o visitante
+        //método para mostrar a sala onde está o visitante
         public void VisitarSala(Sala sala)
         {
             Console.WriteLine($"Sou @ {Nome} e estou a visitar {sala.Nome}");
