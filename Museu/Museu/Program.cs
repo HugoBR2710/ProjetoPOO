@@ -22,7 +22,6 @@ namespace Museu
             var seguranca = new Seguranca("Carlos", 28);
 
 
-
             funcionario.Apresentar();
             //visitante.Apresentar();
             curador.Inventariar();
