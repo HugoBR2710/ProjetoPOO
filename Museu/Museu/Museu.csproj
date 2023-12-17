@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arte.cs" />
+    <Compile Include="Bana.cs" />
     <Compile Include="Escultura.cs" />
     <Compile Include="Exposicao.cs" />
     <Compile Include="Pintura.cs" />
