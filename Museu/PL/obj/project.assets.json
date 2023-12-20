@@ -68,9 +68,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL\\PL.csproj",
-      "projectName": "PL",
-      "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL\\PL.csproj",
+      "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL\\PLer.csproj",
+      "projectName": "PLer",
+      "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL\\PLer.csproj",
       "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL\\obj\\",
       "projectStyle": "PackageReference",
