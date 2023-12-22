@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL\\PLer.csproj": {}
+    "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\PL.csproj": {}
   },
   "projects": {
     "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj": {
@@ -177,14 +177,14 @@
         }
       }
     },
-    "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL\\PLer.csproj": {
+    "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\PL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL\\PLer.csproj",
-        "projectName": "PLer",
-        "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL\\PLer.csproj",
+        "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\PL.csproj",
+        "projectName": "PL",
+        "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\PL.csproj",
         "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL\\obj\\",
+        "outputPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -203,6 +203,9 @@
             "projectReferences": {
               "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj": {
                 "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj"
+              },
+              "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj"
               }
             }
           }

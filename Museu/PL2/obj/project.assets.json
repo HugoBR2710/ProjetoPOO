@@ -1,11 +1,67 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BLL.dll": {}
+        }
+      },
+      "DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAL.dll": {}
+        }
+      },
+      "Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Model.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BLL/1.0.0": {
+      "type": "project",
+      "path": "../BLL/BLL.csproj",
+      "msbuildProject": "../BLL/BLL.csproj"
+    },
+    "DAL/1.0.0": {
+      "type": "project",
+      "path": "../DAL/DAL.csproj",
+      "msbuildProject": "../DAL/DAL.csproj"
+    },
+    "Model/1.0.0": {
+      "type": "project",
+      "path": "../Model/Model.csproj",
+      "msbuildProject": "../Model/Model.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "BLL >= 1.0.0",
+      "Model >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Jorge\\.nuget\\packages\\": {}
@@ -13,9 +69,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\PL2.csproj",
-      "projectName": "PL2",
-      "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\PL2.csproj",
+      "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\PL.csproj",
+      "projectName": "PL",
+      "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\PL.csproj",
       "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\obj\\",
       "projectStyle": "PackageReference",
@@ -33,7 +89,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj": {
+              "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj"
+            },
+            "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

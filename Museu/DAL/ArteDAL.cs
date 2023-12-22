@@ -5,7 +5,6 @@ namespace DAL;
 public class ArteDAL
 {
 
-    private const string _path = "Arte.json";
 
 
     private List<Arte> _obrasDeArte = new List<Arte>();
@@ -47,8 +46,7 @@ public class ArteDAL
         return _obrasDeArte.FirstOrDefault(obra => obra.Titulo == nome && obra.TipoArte == tipo && obra.Autor == autor && obra.AnoCriacao == ano);
     }
 
-   
-    //perguntar ao professor se faz sentido
+    
     public void AtualizarObra(Arte obraDeArte)
     {
         var obra = ObterObraPorNome(obraDeArte.Titulo, obraDeArte.TipoArte, obraDeArte.Autor, obraDeArte.AnoCriacao);
