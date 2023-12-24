@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.Json.Serialization.Metadata;
 using System.Threading.Tasks;
 using BLL;
 using Museu;
@@ -14,7 +15,8 @@ namespace PL
         //private ArteBLL arteB = new ArteBLL();
         //private EsculturaBLL esculturaB;
         //private PinturaBLL pinturaB;
-        private SalaBLL salaB;
+        static SalaBLL salaB = new SalaBLL();
+        static ArteBLL arteB = new ArteBLL();
         //private ExposicaoBLL exposicaoB;
         //private VisitanteBLL visitanteB;
 
@@ -78,51 +80,74 @@ namespace PL
             Console.WriteLine("3 - Sair");
         }
 
-        private void AdicionarSala()
+
+        static void IntroduzirObra()
         {
-            Console.WriteLine("Insira o nome da sala a adicionar");
-            string nomeSala = Console.ReadLine();
-            Sala salaA = new Sala(nomeSala);
-            salaB.AdicionarSala(salaA);
+            Console.WriteLine("Introdução de Obras de arte:\n\n");
+            Console.WriteLine("que tipo de obra deseja introduzir?");
+            Console.WriteLine("1. Escultura");
+            Console.WriteLine("2. Pintura");
+            Console.WriteLine("selecione um numero e prime enter");
+
+            string escolha = Console.ReadLine();
+
+            switch (escolha)
+            {
+                case "1":
+                    IntroduzirEscultura();
+                    break;
+                case "2":
+                    IntroduzirPintura();
+                    break;
+                default:
+                    Console.WriteLine("opção inválida");
+                    break;
+            }
         }
 
-        private void RemoverSala()
+        static void IntroduzirEscultura()
         {
-            Console.WriteLine("Insira o nome da sala a remover");
-            string nomeSala = Console.ReadLine();
-            Sala salaR = new Sala(nomeSala);
-            salaB.RemoverSala(salaR);
-        }
+            Console.WriteLine("Introdução de Esculturas\n\n");
+            
+            Console.WriteLine("Título:");
+            string titulo = Console.ReadLine();
+            Console.WriteLine("Ano de Criação");
+            int anoCriacao = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Autor:");
+            string autor = Console.ReadLine();
+            Console.WriteLine("Material");
+            string material = Console.ReadLine();
+            Console.WriteLine("Altura");
+            double altura = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Largura");
+            double largura = Convert.ToDouble(Console.ReadLine());
 
-        private void AdicionarArteSala()
-        {
-            Console.WriteLine("Insira o nome da sala a adicionar a obra de arte");
-            string nomeSala = Console.ReadLine();
-            Console.WriteLine("Insira o nome da obra de arte a adicionar");
-            string nomeArte = Console.ReadLine();
-            Arte arteA = new Arte(nomeArte);
-            Sala salaA = new Sala(nomeSala);
-            salaB.AdicionarArteSala(salaA, arteA);
-        }
-
-
-        private void RemoverArteSala()
-        {
-            Console.WriteLine("Insira o nome da sala a remover a obra de arte");
-            string nomeSala = Console.ReadLine();
-            Console.WriteLine("Insira o nome da obra de arte a remover");
-            string nomeArte = Console.ReadLine();
-            Arte arteR = new Arte(nomeArte);
-            Sala salaR = new Sala(nomeSala);
-            salaB.RemoverArteSala(salaR, arteR);
+            Arte escultura = new Escultura(titulo, "Escultura", anoCriacao, autor, material, altura, largura);
+            arteB.AdicionarObra(escultura);
         }
 
 
-        private void MostrarTodasSalas()
+        static void IntroduzirPintura()
         {
-            salaB.MostrarTodasSalas();
-        }
+            Console.WriteLine("Introdução de Pinturas\n\n");
+            
+            Console.WriteLine("Título:");
+            string titulo = Console.ReadLine();
+            Console.WriteLine("Ano de Criação");
+            int anoCriacao = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Autor:");
+            string autor = Console.ReadLine();
+            Console.WriteLine("Técnica");
+            string tecnica = Console.ReadLine();
+            Console.WriteLine("Altura");
+            double altura = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Largura");
+            double largura = Convert.ToDouble(Console.ReadLine());
 
+
+            Arte pintura = new Pintura(titulo, "Pintura", anoCriacao, autor, tecnica, altura, largura);
+            arteB.AdicionarObra(pintura);
+        }
 
 
 
