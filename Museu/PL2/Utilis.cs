@@ -6,11 +6,12 @@ using System.Text;
 using System.Text.Json.Serialization.Metadata;
 using System.Threading.Tasks;
 using BLL;
+using DAL;
 using Museu;
 
 namespace PL
 {
-    internal class Utils
+    internal class Utilis
     {
         //private ArteBLL arteB = new ArteBLL();
         //private EsculturaBLL esculturaB;
@@ -30,9 +31,42 @@ namespace PL
             Console.WriteLine("2 - Gerir Obras de Arte");
             Console.WriteLine("3 - Gerir Exposição");
             Console.WriteLine("4 - Gerir Visitantes");
-
             Console.WriteLine("6 - Sair");
         }
+
+        public void Executar1()
+        {
+            bool sair = false;
+            do
+            {
+                Menu1();
+                string opcao = Console.ReadLine();
+                switch (opcao)
+                {
+                    case "1":
+                        Executar2();
+                        break;
+                    case "2":
+                        Executar3();
+                        break;
+                    case "3":
+                        //Executar4();
+                        break;
+                    case "4":
+                        //Executar5();
+                        break;
+                    case "6":
+                        sair = true;
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida");
+                        break;
+                }
+            } while (!sair);
+        }
+
+
+
 
         private protected void Menu2()
         {
@@ -45,15 +79,77 @@ namespace PL
             Console.WriteLine("6 - Sair");
         }
 
+        public void Executar2()
+        {
+            bool sair = false;
+            do
+            {
+                Menu2();
+                string opcao = Console.ReadLine();
+                switch (opcao)
+                {
+                    case "1":
+                        //AdicionarSala();
+                        break;
+                    case "2":
+                        //RemoverSala();
+                        break;
+                    case "3":
+                        //AdicionarArteSala();
+                        break;
+                    case "4":
+                        //RemoverArteSala();
+                        break;
+                    case "5":
+                        //MostrarSalas();
+                        break;
+                    case "6":
+                        sair = true;
+                        Menu1();
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida");
+                        break;
+                }
+            } while (!sair);
+        }
+
         private protected void Menu3()
         {
-            Console.WriteLine("Gestão de Obras de Arte");
-            Console.WriteLine("1 - Adicionar Escultura");
-            Console.WriteLine("2 - Remover Escultura");
-            Console.WriteLine("3 - Adicionar Pintura");
-            Console.WriteLine("4 - Remover Pintura");
-            Console.WriteLine("5 - Mostrar todas as Obras de Arte");
-            Console.WriteLine("6 - Sair");
+            Console.WriteLine("Gestão de Obras de Arte\n\n");
+            Console.WriteLine("1 - Adicionar Obra de Arte");
+            Console.WriteLine("2 - Remover Obra de Arte");
+            Console.WriteLine("3 - Mostrar todas as Obras de Arte");
+            Console.WriteLine("4 - Sair");
+        }
+
+        public void Executar3()
+        {
+            bool sair = false;
+            do
+            {
+                Menu3();
+                string opcao = Console.ReadLine();
+                switch (opcao)
+                {
+                    case "1":
+                        IntroduzirObra();
+                        break;
+                    case "2":
+                        //RemoverObra();
+                        break;
+                    case "3":
+                        MostrarObrasDeArte();
+                        break;
+                    case "4":
+                        sair = true;
+                        Menu1();
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida");
+                        break;
+                }
+            } while (!sair);
         }
 
         private protected void Menu4()
@@ -87,7 +183,7 @@ namespace PL
             Console.WriteLine("que tipo de obra deseja introduzir?");
             Console.WriteLine("1. Escultura");
             Console.WriteLine("2. Pintura");
-            Console.WriteLine("selecione um numero e prime enter");
+            Console.WriteLine("selecione um número e prime enter");
 
             string escolha = Console.ReadLine();
 
@@ -124,6 +220,8 @@ namespace PL
 
             Arte escultura = new Escultura(titulo, "Escultura", anoCriacao, autor, material, altura, largura);
             arteB.AdicionarObra(escultura);
+
+            arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
         }
 
 
@@ -147,8 +245,23 @@ namespace PL
 
             Arte pintura = new Pintura(titulo, "Pintura", anoCriacao, autor, tecnica, altura, largura);
             arteB.AdicionarObra(pintura);
+
+            arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
         }
 
+
+        static void MostrarObrasDeArte()
+        {
+            Console.WriteLine("\nObras de Arte disponíveis:");
+            
+            List<Arte> obras = arteB.ObterTodasObrasDeArte();
+
+            foreach (Arte obra in obras)
+            {
+                obra.ExibirInfo();
+                Console.WriteLine();
+            }
+        }
 
 
 

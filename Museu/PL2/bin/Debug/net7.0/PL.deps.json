@@ -8,35 +8,32 @@
     ".NETCoreApp,Version=v7.0": {
       "PL/1.0.0": {
         "dependencies": {
-          "BLL": "1.0.0.0",
-          "Model": "1.0.0.0"
+          "BLL": "1.0.0",
+          "Model": "1.0.0"
         },
         "runtime": {
           "PL.dll": {}
         }
       },
-      "BLL/1.0.0.0": {
+      "BLL/1.0.0": {
+        "dependencies": {
+          "DAL": "1.0.0"
+        },
         "runtime": {
-          "BLL.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "BLL.dll": {}
         }
       },
-      "Model/1.0.0.0": {
+      "DAL/1.0.0": {
+        "dependencies": {
+          "Model": "1.0.0"
+        },
         "runtime": {
-          "Model.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "DAL.dll": {}
         }
       },
-      "DAL/1.0.0.0": {
+      "Model/1.0.0": {
         "runtime": {
-          "DAL.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Model.dll": {}
         }
       }
     }
@@ -47,18 +44,18 @@
       "serviceable": false,
       "sha512": ""
     },
-    "BLL/1.0.0.0": {
-      "type": "reference",
+    "BLL/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Model/1.0.0.0": {
-      "type": "reference",
+    "DAL/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "DAL/1.0.0.0": {
-      "type": "reference",
+    "Model/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

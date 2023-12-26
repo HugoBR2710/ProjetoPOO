@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "KWgY1wMl2S9WT68j6NLwjyGR2SLHgwE5c6Sqkm/13lcVZyLsm+tSTfJHPpUx78YY1D1FkdVlwy89LgolVkdyBA==",
+  "dgSpecHash": "70y/4LrGkDMifU4DgOlfsOykIadOHiY8jh08JvRxbgSm59jTyQlgDCFY7BwWl0dwOECpov+s6PYliooYMvLtfw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\DAL\\DAL.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Jorge LE\\Desktop\\ProjetoPOO\\Museu\\DAL\\DAL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jorge LE\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Jorge LE\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Jorge LE\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

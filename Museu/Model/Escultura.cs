@@ -29,6 +29,8 @@ namespace Museu
             Console.WriteLine($"Material: {Material}\nAltura: {Altura}\nLargura: {Largura}");
         }
 
+
+
     }
 
 }

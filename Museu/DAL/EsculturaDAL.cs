@@ -10,6 +10,8 @@ public class EsculturaDAL
 
     private const string path = "escultura.json";
 
+
+
     public List<Escultura> ObterTodasEsculturas()
     {
         return _escultura;
@@ -55,13 +57,13 @@ public class EsculturaDAL
         obra.AnoCriacao = escultura.AnoCriacao;
     }
 
-    public void SalvarEscultura()
+    public void SalvarEsculturaFic()
     {
         var json = JsonSerializer.Serialize(_escultura);
         File.WriteAllText(path, json);
     }
 
-    public void CarregarEscultura()
+    public void CarregarEsculturaFic()
     {
         if (File.Exists(path))
         {
@@ -69,6 +71,8 @@ public class EsculturaDAL
             _escultura = JsonSerializer.Deserialize<List<Escultura>>(json);
         }
     }
+
+
      
 
 }

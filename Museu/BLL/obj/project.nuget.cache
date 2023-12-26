@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "UPUUdApqMajsTVQNlHPPUiECu8Y0s6kXRSX4SpkefjvqCtA1VYJZNOUxiGzueR+mG5Yz5IWUHqssVXD03CLLkA==",
+  "dgSpecHash": "nIFk3u8hKLkHTc76ovpRALR5QXW7kce059BGwfCCulsmf7xJhyANqnM0Nf0vgQ1ip5+T1Y400Q6kHHYW9pNMjQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Jorge LE\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jorge LE\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Jorge LE\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Jorge LE\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

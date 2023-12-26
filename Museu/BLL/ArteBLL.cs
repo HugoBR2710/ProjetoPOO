@@ -7,6 +7,7 @@ public class ArteBLL
 {
     private ArteDAL arteDAL;
 
+
     public ArteBLL()
     {
         arteDAL = new ArteDAL();
@@ -53,6 +54,24 @@ public class ArteBLL
         arteDAL.AtualizarObra(arte);
     }
 
+    public void GravarObraFic(List<Arte> _obrasDeArte)
+    {
+        arteDAL.GravarObraFic(_obrasDeArte);
+    }
+
+ 
+    public void CarregarObraFic()
+    {
+        arteDAL.CarregarObraFic();
+    }
+
+
+
+
+
+
+
+ 
 
 
 

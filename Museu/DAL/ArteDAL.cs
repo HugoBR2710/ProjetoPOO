@@ -1,4 +1,5 @@
-﻿using Museu;
+﻿using System.Text.Json;
+using Museu;
 
 namespace DAL;
 
@@ -6,6 +7,7 @@ public class ArteDAL
 {
 
 
+    private const string path = "arte.json";
 
     private List<Arte> _obrasDeArte = new List<Arte>();
 
@@ -56,4 +58,23 @@ public class ArteDAL
         obra.AnoCriacao = obraDeArte.AnoCriacao;
     }
 
+    public void GravarObraFic(List<Arte> _obrasDeArte)
+    {
+        var json = JsonSerializer.Serialize(_obrasDeArte);
+        File.WriteAllText(path, json);
+    }
+
+    public List<Arte> CarregarObraFic()
+    {
+        if (File.Exists(path))
+        {
+            var json = File.ReadAllText(path);
+            _obrasDeArte = JsonSerializer.Deserialize<List<Arte>>(json);
+            return _obrasDeArte;
+        }
+
+        return new List<Arte>();
+    }
+
+   
 }
