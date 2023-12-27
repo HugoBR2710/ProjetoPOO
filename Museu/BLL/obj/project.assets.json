@@ -45,19 +45,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jorge LE\\.nuget\\packages\\": {}
+    "C:\\Users\\Jorge\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jorge LE\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj",
+      "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "C:\\Users\\Jorge LE\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj",
-      "packagesPath": "C:\\Users\\Jorge LE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jorge LE\\Desktop\\ProjetoPOO\\Museu\\BLL\\obj\\",
+      "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj",
+      "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Jorge LE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -71,8 +71,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Jorge LE\\Desktop\\ProjetoPOO\\Museu\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\Jorge LE\\Desktop\\ProjetoPOO\\Museu\\DAL\\DAL.csproj"
+            "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\DAL\\DAL.csproj"
             }
           }
         }
@@ -97,26 +97,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.14, 7.0.14]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.14, 7.0.14]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.14, 7.0.14]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -7,6 +7,7 @@ public class ArteBLL
 {
     private ArteDAL arteDAL;
 
+    
 
     public ArteBLL()
     {
@@ -49,6 +50,7 @@ public class ArteBLL
         return arteDAL.ObterObraPorNome(nome, tipo, autor, ano);
     }
 
+
     public void AtualizarObra(Arte arte)
     {
         arteDAL.AtualizarObra(arte);
@@ -60,19 +62,14 @@ public class ArteBLL
     }
 
  
-    public void CarregarObraFic()
+    public List<Arte> CarregarObraFic()
     {
-        arteDAL.CarregarObraFic();
+        return arteDAL.CarregarObraFic();
     }
 
-
-
-
-
-
-
- 
-
-
+    public void RemoverObra(string nome)
+    {
+        arteDAL.RemoverObra(nome);
+    }
 
 }

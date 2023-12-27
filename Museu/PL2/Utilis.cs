@@ -6,14 +6,12 @@ using System.Text;
 using System.Text.Json.Serialization.Metadata;
 using System.Threading.Tasks;
 using BLL;
-using DAL;
 using Museu;
 
 namespace PL
 {
     internal class Utilis
     {
-        //private ArteBLL arteB = new ArteBLL();
         //private EsculturaBLL esculturaB;
         //private PinturaBLL pinturaB;
         static SalaBLL salaB = new SalaBLL();
@@ -84,6 +82,7 @@ namespace PL
             bool sair = false;
             do
             {
+                
                 Menu2();
                 string opcao = Console.ReadLine();
                 switch (opcao)
@@ -128,20 +127,25 @@ namespace PL
             bool sair = false;
             do
             {
+                Console.Clear();
                 Menu3();
                 string opcao = Console.ReadLine();
                 switch (opcao)
                 {
                     case "1":
+                        Console.Clear();
                         IntroduzirObra();
                         break;
                     case "2":
-                        //RemoverObra();
+                        Console.Clear();
+                        RemoverObra();
                         break;
                     case "3":
+                        Console.Clear();
                         MostrarObrasDeArte();
                         break;
                     case "4":
+                        Console.Clear();
                         sair = true;
                         Menu1();
                         break;
@@ -254,16 +258,26 @@ namespace PL
         {
             Console.WriteLine("\nObras de Arte disponíveis:");
             
-            List<Arte> obras = arteB.ObterTodasObrasDeArte();
+            var obras = arteB.CarregarObraFic();
 
             foreach (Arte obra in obras)
             {
                 obra.ExibirInfo();
                 Console.WriteLine();
             }
+
         }
 
+        static void RemoverObra()
+        {
+            Console.WriteLine("Remover Obra de Arte\n\n");
+            Console.WriteLine("Obras Disponíveis");
+            MostrarObrasDeArte();
+            Console.WriteLine("Título da Obra a Remover:");
+            string titulo = Console.ReadLine();
 
+            arteB.RemoverObra(titulo);
+        }
 
 
 

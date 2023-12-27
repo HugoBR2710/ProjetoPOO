@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jorge LE\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj": {}
+    "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jorge LE\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj": {
+    "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jorge LE\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\Jorge LE\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\Jorge LE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jorge LE\\Desktop\\ProjetoPOO\\Museu\\Model\\obj\\",
+        "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jorge LE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -50,26 +50,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.14, 7.0.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

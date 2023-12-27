@@ -10,20 +10,26 @@ namespace Museu
     public class Sala
     {
         public String Nome { get; set; }
-        public List<Arte> ObrasDeArte { get; set; } = new List<Arte>();
-        public Sala(string nome)
+        public int Capacidade { get; set; }
+
+
+        public Sala()
+        {
+
+        }
+
+        public Sala(string nome, int capacidade) 
         {
             Nome = nome;
+            Capacidade = capacidade;
         }
 
-        public void AdicionarObraDeArte(Arte obra)
+
+        public virtual void ExibirInfo()
         {
-            ObrasDeArte.Add(obra);
+            Console.WriteLine($"Nome: {Nome}\nCapacidade: {Capacidade}");
         }
 
-        public void RemoverObraDeArte(Arte obra)
-        {
-            ObrasDeArte.Remove(obra);
-        }
+
     }
 }

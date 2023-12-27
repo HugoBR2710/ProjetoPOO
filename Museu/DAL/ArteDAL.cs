@@ -1,12 +1,11 @@
 ﻿using System.Text.Json;
 using Museu;
+using static System.String;
 
 namespace DAL;
 
 public class ArteDAL
 {
-
-
     private const string path = "arte.json";
 
     private List<Arte> _obrasDeArte = new List<Arte>();
@@ -71,9 +70,28 @@ public class ArteDAL
             var json = File.ReadAllText(path);
             _obrasDeArte = JsonSerializer.Deserialize<List<Arte>>(json);
             return _obrasDeArte;
+
         }
 
         return new List<Arte>();
+    }
+
+    public void RemoverObra(string titObra)
+    {
+        List<Arte> obraArt = CarregarObraFic();
+        Arte obraARemover = obraArt.FirstOrDefault(obra => obra.Titulo == titObra);
+
+        if (obraARemover != null)
+        {
+            obraArt.Remove(obraARemover);
+            GravarObraFic(obraArt);
+            Console.WriteLine($"A obra '{titObra}' foi removida do acervo");
+        }
+        else
+        {
+            Console.WriteLine($"A obra '{titObra}' não foi encontrada no acervo");
+        }
+
     }
 
    

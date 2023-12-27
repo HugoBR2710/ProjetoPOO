@@ -29,8 +29,7 @@ public class SalaDAL
     public void AtualizarSala(Sala sala)
     {
         var salaAtualizada = ObterSalaPorNome(sala.Nome);
-        salaAtualizada.Nome = sala.Nome;
-        salaAtualizada.ObrasDeArte = sala.ObrasDeArte;
+        salaAtualizada.Nome = sala.Nome; 
     }
 
 

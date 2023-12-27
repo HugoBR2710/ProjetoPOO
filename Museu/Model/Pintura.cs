@@ -3,7 +3,6 @@
 namespace Museu
 {
 
-    //classe Escultura que é subclasse ou filha de Arte que é pai ou superclasse
     public class Pintura : Arte
     {
         public string Tecnica { get; set; }

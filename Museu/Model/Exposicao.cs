@@ -5,14 +5,45 @@ namespace Museu
 
     public class Exposicao : Sala
     { 
-        public int Capacidade { get; set; }
         public int VisitantesPres  { get; set; }
+        public List<Arte> ObrasDeArte { get; set; } = new List<Arte>();
+        public List<Visitante> Visitantes { get; set; } = new List<Visitante>();
 
 
-        public Exposicao(string nome, int capacidadeM) : base(nome)
+
+        public Exposicao(string nome, int capacidade, List<Arte>obrasDeArte)            
+        : base(nome, capacidade)
         {
-            Capacidade = capacidadeM;
+            ObrasDeArte = obrasDeArte;
         }
+
+        public Exposicao(string nome, int capacidade, int visitantesPres, List<Arte> obrasDeArte, List<Visitante> visitantes)
+            : base(nome, capacidade)
+        {
+            VisitantesPres = visitantesPres;
+            ObrasDeArte = obrasDeArte;
+            Visitantes = visitantes;
+        }
+
+
+
+        public void AdicionarObraExpo(Arte obra)
+        {
+                ObrasDeArte.Add(obra);
+        }
+
+        public void RemoverObraExpo(Arte obra)
+        {
+            if (ObrasDeArte.Count > 0)
+            {
+                ObrasDeArte.Remove(obra);
+            }
+            else
+            {
+                Console.WriteLine("Não há obras de arte para retirar.");
+            }
+        }
+
 
         public void AdicionarVisitante()
         {
@@ -37,7 +68,20 @@ namespace Museu
                 Console.WriteLine("Não há visitantes para sair.");
             }
         }
-
+ 
+        /*
+        public void RemoverVisitante(Visitante visitante)
+        {
+            if (Visitantes.Contains(visitante))
+            {
+                Visitantes.Remove(visitante);
+            }
+            else
+            {
+                Console.WriteLine("Visitante não encontrado na exposição.");
+            }
+        }
+        */
 
 
 

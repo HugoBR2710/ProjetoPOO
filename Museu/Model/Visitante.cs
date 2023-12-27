@@ -3,11 +3,12 @@
 namespace Museu
 {
     // Classe Visitante derivada de Pessoa
-    class Visitante : Pessoa
+    public class Visitante : Pessoa
     {
         public string MotivoVisita { get; set; }
 
-        public Visitante(string nome, int idade, string motivoVisita) : base(nome, idade)
+        public Visitante(string nome, int idade, string motivoVisita) 
+            : base(nome, idade)
         {
             Nome = nome;
             Idade = idade;

@@ -32,15 +32,6 @@ public class EsculturaDAL
         return _escultura.FirstOrDefault(escultura => escultura.Titulo == nome);
     }
 
-    public Escultura ObterEsculturaPorNome(string nome, string tipo)
-    {
-        return _escultura.FirstOrDefault(escultura => escultura.Titulo == nome && escultura.TipoArte == tipo);
-    }
-
-    public Escultura ObterEsculturaPorNome(string nome, string tipo, string autor)
-    {
-        return _escultura.FirstOrDefault(escultura => escultura.Titulo == nome && escultura.TipoArte == tipo && escultura.Autor == autor);
-    }
 
     public Escultura ObterEsculturaPorNome(string nome, string tipo, string autor, int ano)
     {
