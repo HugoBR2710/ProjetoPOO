@@ -486,18 +486,17 @@ namespace PL
 
             Arte arte = arteB.ObterObraPorNome(titulo);
             Exposicao exposicao = exposicaoB.ObterExposicaoPorNome(nome);
-            exposicao.RemoverObraExpo(arte);
-            exposicaoB.GravarExposicaoFic(exposicaoB.ObterTodasExposicoes());
-            //try
-            //{
-            //    exposicaoB.GravarExposicaoFic(exposicaoB.ObterTodasExposicoes());
-            //    Console.WriteLine("Obra removida com sucesso e exposição atualizada.");
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine("Ocorreu um erro ao tentar gravar a exposição no arquivo.");
-            //    Console.WriteLine(ex.Message);
-            //}
+            exposicao.RemoverObraExpo(titulo);
+            try
+            {
+                exposicaoB.GravarExposicaoFic(exposicaoB.ObterTodasExposicoes());
+                Console.WriteLine("Obra removida com sucesso e exposição atualizada.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ocorreu um erro ao tentar gravar a exposição no arquivo.");
+                Console.WriteLine(ex.Message);
+            }
 
         }
 

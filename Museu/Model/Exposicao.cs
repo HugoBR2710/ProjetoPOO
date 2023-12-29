@@ -42,15 +42,30 @@ namespace Museu
                 ObrasDeArte.Add(obra);
         }
 
-        public void RemoverObraExpo(Arte obra)
+        //public void RemoverObraExpo(Arte obra)
+        //{
+        //    if (ObrasDeArte.Count > 0)
+        //    {
+        //        ObrasDeArte.Remove(obra);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Não há obras de arte para retirar.");
+        //    }
+        //}
+
+        public void RemoverObraExpo(string nome)
         {
-            if (ObrasDeArte.Count > 0)
+            Arte ObraParaRemover = ObrasDeArte.FirstOrDefault(obra => obra.Titulo == nome);
+
+            if (ObraParaRemover != null)
             {
-                ObrasDeArte.Remove(obra);
+                ObrasDeArte.Remove(ObraParaRemover);
+                Console.WriteLine($"Removido com sucesso");
             }
             else
             {
-                Console.WriteLine("Não há obras de arte para retirar.");
+                Console.WriteLine($"Não foi possível remover a obra da exposição");
             }
         }
 

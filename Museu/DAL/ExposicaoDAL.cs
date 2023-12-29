@@ -47,6 +47,8 @@ namespace DAL
         {
             _exposicoes.Remove(exposicao);
         }
+
+       
         /// <summary>
         /// Obtém uma exposição pelo seu nome.
         /// </summary>
