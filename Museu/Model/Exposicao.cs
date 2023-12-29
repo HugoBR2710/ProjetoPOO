@@ -11,6 +11,12 @@ namespace Museu
         public List<Visitante> Visitantes { get; set; } = new List<Visitante>();
 
 
+
+        //public Exposicao()
+        //{
+
+        //}
+
         public Exposicao(string nome, int capacidade)
         : base(nome, capacidade)
         {
@@ -75,31 +81,31 @@ namespace Museu
             }
         }
 
-        /*
-        public void RemoverVisitante(Visitante visitante)
-        {
-            if (Visitantes.Contains(visitante))
-            {
-                Visitantes.Remove(visitante);
-            }
-            else
-            {
-                Console.WriteLine("Visitante não encontrado na exposição.");
-            }
-        }
-        */
 
         public static Exposicao ConverterSalaParaExposicao(Sala sala)
         {
             if (sala is Exposicao exposicao)
             {
-                return exposicao; // Se já for uma exposição, retorna o mesmo objeto
+                return exposicao;
             }
             else
             {
                 return new Exposicao(sala.Nome, sala.Capacidade);
             }
         }
+
+
+        //mostra o nome da Sala e obras expostas
+        public void MostraSalaObras()
+        {
+            Console.WriteLine($"Exposição: {Nome}");
+            Console.WriteLine("Obras expostas:");
+            foreach (Arte obra in ObrasDeArte)
+            {
+                Console.WriteLine(obra.Titulo);
+            }
+        }
+
 
 
 

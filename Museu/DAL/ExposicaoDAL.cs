@@ -52,6 +52,7 @@ public class ExposicaoDAL
         {
             var json = File.ReadAllText(path);
             _exposicoes = JsonSerializer.Deserialize<List<Exposicao>>(json);
+            return _exposicoes;
         }
         return new List<Exposicao>();
     }
