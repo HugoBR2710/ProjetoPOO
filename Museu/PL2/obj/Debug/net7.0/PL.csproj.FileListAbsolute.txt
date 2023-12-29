@@ -43,3 +43,25 @@ C:\Users\Jorge LE\Desktop\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\refint\PL.dll
 C:\Users\Jorge LE\Desktop\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\PL.pdb
 C:\Users\Jorge LE\Desktop\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\PL.genruntimeconfig.cache
 C:\Users\Jorge LE\Desktop\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\ref\PL.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\bin\Debug\net7.0\PL.exe
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\bin\Debug\net7.0\PL.deps.json
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\bin\Debug\net7.0\PL.runtimeconfig.json
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\bin\Debug\net7.0\PL.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\bin\Debug\net7.0\PL.pdb
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\bin\Debug\net7.0\BLL.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\bin\Debug\net7.0\DAL.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\bin\Debug\net7.0\Model.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\bin\Debug\net7.0\BLL.pdb
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\bin\Debug\net7.0\Model.pdb
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\bin\Debug\net7.0\DAL.pdb
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\PL.csproj.AssemblyReference.cache
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\PL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\PL.AssemblyInfoInputs.cache
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\PL.AssemblyInfo.cs
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\PL.csproj.CoreCompileInputs.cache
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\PL.csproj.CopyComplete
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\PL.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\refint\PL.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\PL.pdb
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\PL.genruntimeconfig.cache
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\PL2\obj\Debug\net7.0\ref\PL.dll

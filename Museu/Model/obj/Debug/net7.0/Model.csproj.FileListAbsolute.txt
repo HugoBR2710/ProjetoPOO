@@ -21,3 +21,14 @@ C:\Users\Jorge LE\Desktop\ProjetoPOO\Museu\Model\obj\Debug\net7.0\Model.dll
 C:\Users\Jorge LE\Desktop\ProjetoPOO\Museu\Model\obj\Debug\net7.0\refint\Model.dll
 C:\Users\Jorge LE\Desktop\ProjetoPOO\Museu\Model\obj\Debug\net7.0\Model.pdb
 C:\Users\Jorge LE\Desktop\ProjetoPOO\Museu\Model\obj\Debug\net7.0\ref\Model.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\Model\bin\Debug\net7.0\Model.deps.json
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\Model\bin\Debug\net7.0\Model.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\Model\bin\Debug\net7.0\Model.pdb
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\Model\obj\Debug\net7.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\Model\obj\Debug\net7.0\Model.AssemblyInfoInputs.cache
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\Model\obj\Debug\net7.0\Model.AssemblyInfo.cs
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\Model\obj\Debug\net7.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\Model\obj\Debug\net7.0\Model.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\Model\obj\Debug\net7.0\refint\Model.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\Model\obj\Debug\net7.0\Model.pdb
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\Model\obj\Debug\net7.0\ref\Model.dll

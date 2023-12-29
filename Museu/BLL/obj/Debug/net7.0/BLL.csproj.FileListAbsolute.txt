@@ -33,3 +33,20 @@ C:\Users\Jorge LE\Desktop\ProjetoPOO\Museu\BLL\obj\Debug\net7.0\BLL.dll
 C:\Users\Jorge LE\Desktop\ProjetoPOO\Museu\BLL\obj\Debug\net7.0\refint\BLL.dll
 C:\Users\Jorge LE\Desktop\ProjetoPOO\Museu\BLL\obj\Debug\net7.0\BLL.pdb
 C:\Users\Jorge LE\Desktop\ProjetoPOO\Museu\BLL\obj\Debug\net7.0\ref\BLL.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\bin\Debug\net7.0\BLL.deps.json
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\bin\Debug\net7.0\BLL.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\bin\Debug\net7.0\BLL.pdb
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\bin\Debug\net7.0\DAL.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\bin\Debug\net7.0\Model.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\bin\Debug\net7.0\DAL.pdb
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\bin\Debug\net7.0\Model.pdb
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\obj\Debug\net7.0\BLL.csproj.AssemblyReference.cache
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\obj\Debug\net7.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\obj\Debug\net7.0\BLL.AssemblyInfoInputs.cache
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\obj\Debug\net7.0\BLL.AssemblyInfo.cs
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\obj\Debug\net7.0\BLL.csproj.CoreCompileInputs.cache
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\obj\Debug\net7.0\BLL.csproj.CopyComplete
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\obj\Debug\net7.0\BLL.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\obj\Debug\net7.0\refint\BLL.dll
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\obj\Debug\net7.0\BLL.pdb
+C:\Users\hugos\Source\Repos\ProjetoPOO\Museu\BLL\obj\Debug\net7.0\ref\BLL.dll

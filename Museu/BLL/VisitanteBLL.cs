@@ -14,11 +14,19 @@ public class VisitanteBLL
         visitanteDAL = new VisitanteDAL();
     }
 
+    public List<Visitante> ObterTodosVisitantes()
+    {
+        return visitanteDAL.ObterTodosVisitantes();
+    }
     public void AdicionarVisitante(Visitante visitante)
     {
         visitanteDAL.AdicionarVisitante(visitante);
     }
 
+    public void RemoverVisitante(string nome)
+    {
+        visitanteDAL.RemoverVisitante(nome);
+    }
 
     public void RemoverVisitante(Visitante visitante)
     {

@@ -24,6 +24,21 @@ public class VisitanteDAL
         _visitantes.Remove(visitante);
     }
 
+    public void RemoverVisitante(string nome)
+    {
+        Visitante visitanteParaRemover = _visitantes.FirstOrDefault(visitante => visitante.Nome == nome);
+
+        if (visitanteParaRemover != null)
+        {
+            _visitantes.Remove(visitanteParaRemover);
+            Console.WriteLine($"Visitante '{nome}' removido com sucesso.");
+        }
+        else
+        {
+            Console.WriteLine($"Visitante '{nome}' não encontrado.");
+        }
+    }
+
     public Visitante ObterVisitantePorNome(string nome)
     {
         return _visitantes.FirstOrDefault(visitante => visitante.Nome == nome);
