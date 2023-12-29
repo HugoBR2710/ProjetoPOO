@@ -5,14 +5,19 @@ namespace BLL;
 
 public class ExposicaoBLL
 {
-    //private ExposicaoDAL exposicaoDAL = new ExposicaoDAL();
+    private ExposicaoDAL exposicaoDAL = new ExposicaoDAL();
 
-    private ExposicaoDAL exposicaoDAL;
+    //private ExposicaoDAL exposicaoDAL;
 
     //public ExposicaoBLL()
     //{
     //    exposicaoDAL = new ExposicaoDAL();
     //}
+
+    public List<Exposicao> ObterTodasExposicoes()
+    {
+        return exposicaoDAL.ObterTodasExposicoes();
+    }
 
     public void AdicionarExposicao(Exposicao exposicao)
     {
@@ -45,6 +50,11 @@ public class ExposicaoBLL
         return exposicaoDAL.CarregarExposicaoFic();
     }
 
+
+    public void SalvarExposicaoFic()
+    {
+        exposicaoDAL.SalvarExposicaoFic();
+    }
 
 
 
