@@ -24,7 +24,7 @@ namespace Museu
 
         public override void Apresentar()
         {
-            Console.WriteLine($"Olá, sou um visitante chamado {Nome}, tenho {Idade} anos e estou aqui para {MotivoVisita}.");
+            Console.WriteLine($"Visitante: {Nome}\nIdade: {Idade}\nMotivo da Visita: {MotivoVisita}.");
         }
     }
 }

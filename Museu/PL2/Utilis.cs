@@ -423,11 +423,11 @@ namespace PL
                         break;
                     case "3":
                         Console.Clear();
-                        //AdicionarVisitanteExpo();
+                        AdicionarVisitanteExpo();
                         break;
                     case "4":
                         Console.Clear();
-                        //RemoverVisitanteExpo();
+                        RemoverVisitanteExpo();
                         break;
                     case "5":
                         Console.Clear();
@@ -484,7 +484,7 @@ namespace PL
             Console.WriteLine("Título da Obra:");
             string titulo = Console.ReadLine();
 
-            Arte arte = arteB.ObterObraPorNome(titulo);
+            //Arte arte = arteB.ObterObraPorNome(titulo);
             Exposicao exposicao = exposicaoB.ObterExposicaoPorNome(nome);
             exposicao.RemoverObraExpo(titulo);
             try
@@ -499,18 +499,79 @@ namespace PL
             }
 
         }
+        private void AdicionarVisitanteExpo()
+        {
+            Console.WriteLine("Adicionar Visitante à Sala\n\n");
+            Console.WriteLine("Salas Disponíveis");
+            MostrarSalas();
+            Console.WriteLine("Nome da Sala:");
+            string nomeSala = Console.ReadLine();
+            Console.WriteLine("Visitantes existentes");
+            MostrarVisitantes();
+            Console.WriteLine("Nome do Visitante:");
+            string nome = Console.ReadLine();
+
+            Visitante visitante = visitanteB.ObterVisitantePorNome(nome);
+            Sala sala = salaB.ObterSalaPorNome(nomeSala);
+
+            // Adicionar vistante à exposição
+            Exposicao exposicao = new Exposicao(sala.Nome, sala.Capacidade);
+            exposicao.AdicionarVisitanteExpo(visitante);
+
+            // Adiciona a nova exposição ao DAL
+            exposicaoB.AdicionarExposicao(exposicao);
+            // Grava as alterações no arquivo
+            exposicaoB.SalvarExposicaoFic();
+
+        }
+        private void RemoverVisitanteExpo()
+        {
+            Console.WriteLine("Remover Visitante das Exposições");
+            Console.WriteLine("Exposições Disponíveis");
+            MostrarExposicoes();
+            Console.WriteLine("Nome da Exposição:");
+            string nome = Console.ReadLine();
+            Console.WriteLine("Visitantes Existentes");
+            MostrarVisitantes();
+            Console.WriteLine("Nome do visitante:");
+            string nomeVisitante = Console.ReadLine();
+
+            Visitante visitante = visitanteB.ObterVisitantePorNome(nomeVisitante);
+            Exposicao exposicao = exposicaoB.ObterExposicaoPorNome(nome);
+            exposicao.RemoverVisitanteExpo(nomeVisitante);
+            try
+            {
+                exposicaoB.GravarExposicaoFic(exposicaoB.ObterTodasExposicoes());
+                Console.WriteLine("Visitante removido com sucesso e exposição atualizada.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ocorreu um erro ao tentar gravar a exposição no arquivo.");
+                Console.WriteLine(ex.Message);
+            }
 
 
+        }
         public void MostrarExposicoes()
         {
-            Console.WriteLine("\nExposições disponíveis:");
             var exposicoes = exposicaoB.CarregarExposicaoFic();
-
-            foreach (Exposicao exposicao in exposicoes)
+            if(exposicoes == null)
             {
-                exposicao.MostraSalaObras();
-                Console.WriteLine();
+                Console.WriteLine("Não há exposições disponíveis");
+
             }
+            else
+            {
+                Console.WriteLine("\nExposições disponíveis:");
+
+
+                foreach (Exposicao exposicao in exposicoes)
+                {
+                    exposicao.MostraSalaObras();
+                    Console.WriteLine();
+                }
+            }
+            
         }
 
 

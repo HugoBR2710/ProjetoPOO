@@ -42,6 +42,26 @@ namespace Museu
                 ObrasDeArte.Add(obra);
         }
 
+        public void AdicionarVisitanteExpo(Visitante visitante)
+        {
+            Visitantes.Add(visitante);
+        }
+
+        public void RemoverVisitanteExpo(string nome)
+        {
+            Visitante visitante = Visitantes.FirstOrDefault(visitante => visitante.Nome == nome);
+
+            if (Visitantes != null)
+            {
+                Visitantes.Remove(visitante);
+                Console.WriteLine($"Visitante {nome} Removido com sucesso");
+            }
+            else
+            {
+                Console.WriteLine($"Não foi possível remover o visitante {nome} da exposição");
+            }
+        }
+
         //public void RemoverObraExpo(Arte obra)
         //{
         //    if (ObrasDeArte.Count > 0)
@@ -68,6 +88,7 @@ namespace Museu
                 Console.WriteLine($"Não foi possível remover a obra da exposição");
             }
         }
+
 
 
         public void AdicionarVisitante()

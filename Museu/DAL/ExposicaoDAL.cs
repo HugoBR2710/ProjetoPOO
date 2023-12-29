@@ -88,8 +88,16 @@ namespace DAL
             if (File.Exists(path))
             {
                 var json = File.ReadAllText(path);
-                _exposicoes = JsonSerializer.Deserialize<List<Exposicao>>(json);
-                return _exposicoes;
+                if(json == "")
+                {
+                    return null;
+                }
+                else
+                {
+                    _exposicoes = JsonSerializer.Deserialize<List<Exposicao>>(json);
+                    return _exposicoes;
+                }
+                
             }
 
             return new List<Exposicao>();
