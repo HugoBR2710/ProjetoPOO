@@ -21,7 +21,7 @@ namespace PL
 
         
 
-
+        //Menu Inicial
         private protected void Menu1()
         {
             Console.Clear();
@@ -32,7 +32,6 @@ namespace PL
             Console.WriteLine("4 - Gerir Visitantes");
             Console.WriteLine("5 - Sair");
         }
-
         public void Executar1()
         {
             bool sair = false;
@@ -65,8 +64,7 @@ namespace PL
         }
 
 
-
-
+        //Gestão de Salas
         private protected void Menu2()
         {
             Console.WriteLine("Gestão de Salas");
@@ -75,7 +73,6 @@ namespace PL
             Console.WriteLine("3 - Mostrar todas as Salas");
             Console.WriteLine("4 - Sair");
         }
-
         public void Executar2()
         {
             bool sair = false;
@@ -100,17 +97,6 @@ namespace PL
                         break;
                     case "3":
                         Console.Clear();
-                        AdicionarArteSala();
-                        Menu2();
-                        break;
-                    case "4":
-                        Console.Clear();
-                        RemoverArteSala();
-                        Menu2();
-                        break;
-                    case "5":
-                        Console.Clear();
-
                         MostrarSalas();
                         Menu2();
                         break;
@@ -124,8 +110,6 @@ namespace PL
                 }
             } while (!sair);
         }
-
-
         private void AdicionarSala()
         {
             Console.WriteLine("Introdução de Salas\n\n");
@@ -139,7 +123,6 @@ namespace PL
             salaB.AdicionarSala(sala);
             salaB.GravarSalaFic(salaB.ObterTodasSalas());
         }
-
         private void RemoverSala()
         {
             Console.WriteLine("Remover Sala\n\n");
@@ -157,8 +140,6 @@ namespace PL
             }
 
         }
-
-
         private void MostrarSalas()
         {
             Console.WriteLine("\nSalas disponíveis:");
@@ -171,6 +152,8 @@ namespace PL
             }
         }
 
+
+        //Gestão de obras de arte
         private protected void Menu3()
         {
             Console.WriteLine("Gestão de Obras de Arte\n\n");
@@ -179,7 +162,6 @@ namespace PL
             Console.WriteLine("3 - Mostrar todas as Obras de Arte");
             Console.WriteLine("4 - Sair");
         }
-
         public void Executar3()
         {
             bool sair = false;
@@ -217,7 +199,108 @@ namespace PL
                 }
             } while (!sair);
         }
+        static void IntroduzirObra()
+        {
+            Console.WriteLine("Introdução de Obras de arte:\n\n");
+            Console.WriteLine("que tipo de obra deseja introduzir?");
+            Console.WriteLine("1. Escultura");
+            Console.WriteLine("2. Pintura");
+            Console.WriteLine("selecione um número e prime enter");
 
+            string escolha = Console.ReadLine();
+
+            switch (escolha)
+            {
+                case "1":
+                    IntroduzirEscultura();
+                    break;
+                case "2":
+                    IntroduzirPintura();
+                    break;
+                default:
+                    Console.WriteLine("opção inválida");
+                    break;
+            }
+        }
+        static void IntroduzirEscultura()
+        {
+            Console.WriteLine("Introdução de Esculturas\n\n");
+
+            Console.WriteLine("Título:");
+            string titulo = Console.ReadLine();
+            Console.WriteLine("Ano de Criação");
+            int anoCriacao = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Autor:");
+            string autor = Console.ReadLine();
+            Console.WriteLine("Material");
+            string material = Console.ReadLine();
+            Console.WriteLine("Altura");
+            double altura = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Largura");
+            double largura = Convert.ToDouble(Console.ReadLine());
+
+            Arte escultura = new Escultura(titulo, "Escultura", anoCriacao, autor, material, altura, largura);
+            arteB.AdicionarObra(escultura);
+
+            arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
+        }
+        static void IntroduzirPintura()
+        {
+            Console.WriteLine("Introdução de Pinturas\n\n");
+
+            Console.WriteLine("Título:");
+            string titulo = Console.ReadLine();
+            Console.WriteLine("Ano de Criação");
+            int anoCriacao = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Autor:");
+            string autor = Console.ReadLine();
+            Console.WriteLine("Técnica");
+            string tecnica = Console.ReadLine();
+            Console.WriteLine("Altura");
+            double altura = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Largura");
+            double largura = Convert.ToDouble(Console.ReadLine());
+
+
+            Arte pintura = new Pintura(titulo, "Pintura", anoCriacao, autor, tecnica, altura, largura);
+            arteB.AdicionarObra(pintura);
+
+            arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
+        }
+        static void RemoverObra()
+        {
+            Console.WriteLine("Remover Obra de Arte\n\n");
+            Console.WriteLine("Obras Disponíveis");
+            MostrarObrasDeArte();
+            Console.WriteLine("Título da Obra a Remover:");
+            string titulo = Console.ReadLine();
+            try
+            {
+                arteB.RemoverObra(titulo);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Obra Inválida ");
+                throw;
+            }
+
+        }
+        static void MostrarObrasDeArte()
+        {
+            Console.WriteLine("\nObras de Arte disponíveis:");
+
+            var obras = arteB.CarregarObraFic();
+
+            foreach (Arte obra in obras)
+            {
+                obra.ExibirInfo();
+                Console.WriteLine();
+            }
+
+        }
+
+
+        //Gestão de Visitantes
         private protected void Menu5()      
         {
             Console.WriteLine("Gestão de Visitantes");
@@ -226,7 +309,6 @@ namespace PL
             Console.WriteLine("3 - Mostrar todos os visitantes do Museu e motivo");
             Console.WriteLine("6 - Sair");
         }
-
         public void Executar5()
         {
             bool sair = false;
@@ -264,7 +346,6 @@ namespace PL
                 }
             } while (!sair);
         }
-
         private void AdicionarVisitantes()
         {
             Console.WriteLine("Introdução de um Visitante\n\n");
@@ -280,7 +361,6 @@ namespace PL
             visitanteB.AdicionarVisitante(visitante);
             visitanteB.GravarVisitanteFic(visitanteB.ObterTodosVisitantes());
         }
-
         private void RemoverVisitantes()
         {
             Console.WriteLine("Remover Visitante\n\n");
@@ -299,7 +379,6 @@ namespace PL
             }
 
         }
-
         private void MostrarVisitantes()
         {
             Console.WriteLine("\nVisitantes:");
@@ -312,112 +391,8 @@ namespace PL
             }
         }
 
-        static void IntroduzirObra()
-        {
-            Console.WriteLine("Introdução de Obras de arte:\n\n");
-            Console.WriteLine("que tipo de obra deseja introduzir?");
-            Console.WriteLine("1. Escultura");
-            Console.WriteLine("2. Pintura");
-            Console.WriteLine("selecione um número e prime enter");
 
-            string escolha = Console.ReadLine();
-
-            switch (escolha)
-            {
-                case "1":
-                    IntroduzirEscultura();
-                    break;
-                case "2":
-                    IntroduzirPintura();
-                    break;
-                default:
-                    Console.WriteLine("opção inválida");
-                    break;
-            }
-        }
-
-        static void IntroduzirEscultura()
-        {
-            Console.WriteLine("Introdução de Esculturas\n\n");
-
-            Console.WriteLine("Título:");
-            string titulo = Console.ReadLine();
-            Console.WriteLine("Ano de Criação");
-            int anoCriacao = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Autor:");
-            string autor = Console.ReadLine();
-            Console.WriteLine("Material");
-            string material = Console.ReadLine();
-            Console.WriteLine("Altura");
-            double altura = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Largura");
-            double largura = Convert.ToDouble(Console.ReadLine());
-
-            Arte escultura = new Escultura(titulo, "Escultura", anoCriacao, autor, material, altura, largura);
-            arteB.AdicionarObra(escultura);
-
-            arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
-        }
-
-
-        static void IntroduzirPintura()
-        {
-            Console.WriteLine("Introdução de Pinturas\n\n");
-
-            Console.WriteLine("Título:");
-            string titulo = Console.ReadLine();
-            Console.WriteLine("Ano de Criação");
-            int anoCriacao = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Autor:");
-            string autor = Console.ReadLine();
-            Console.WriteLine("Técnica");
-            string tecnica = Console.ReadLine();
-            Console.WriteLine("Altura");
-            double altura = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Largura");
-            double largura = Convert.ToDouble(Console.ReadLine());
-
-
-            Arte pintura = new Pintura(titulo, "Pintura", anoCriacao, autor, tecnica, altura, largura);
-            arteB.AdicionarObra(pintura);
-
-            arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
-        }
-
-
-        static void MostrarObrasDeArte()
-        {
-            Console.WriteLine("\nObras de Arte disponíveis:");
-
-            var obras = arteB.CarregarObraFic();
-
-            foreach (Arte obra in obras)
-            {
-                obra.ExibirInfo();
-                Console.WriteLine();
-            }
-
-        }
-
-        static void RemoverObra()
-        {
-            Console.WriteLine("Remover Obra de Arte\n\n");
-            Console.WriteLine("Obras Disponíveis");
-            MostrarObrasDeArte();
-            Console.WriteLine("Título da Obra a Remover:");
-            string titulo = Console.ReadLine();
-            try
-            {
-                arteB.RemoverObra(titulo);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Obra Inválida ");
-                throw;
-            }
-
-        }
-
+        //Gestão de exposições
         private protected void Menu4()
         {
             Console.WriteLine("Gestão de Exposições");
@@ -429,7 +404,6 @@ namespace PL
             Console.WriteLine("6 - Mostras Exposições e Visitantes");
             Console.WriteLine("9 - Sair");
         }
-
         public void Executar4()
         {
             bool sair = false;
@@ -474,7 +448,6 @@ namespace PL
                 }
             } while (!sair);
         }
-
         private void AdicionarArteExpo()
         {
             Console.WriteLine("Adicionar Arte à Sala\n\n");
