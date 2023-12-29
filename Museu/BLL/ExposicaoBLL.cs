@@ -62,9 +62,9 @@ namespace BLL
         /// Guarda a lista de exposições num ficheiro.
         /// </summary>
         /// <param name="_exposicoes">A lista de exposições a guardar.</param>
-        public void GravarExposicaoFic(List<Exposicao> _exposicoes)
+        public void GravarExposicaoFic()
         {
-            exposicaoDAL.GravarExposicaoFic(_exposicoes);
+            exposicaoDAL.GravarExposicaoFic();
         }
 
         /// <summary>
@@ -74,14 +74,6 @@ namespace BLL
         public List<Exposicao> CarregarExposicaoFic()
         {
             return exposicaoDAL.CarregarExposicaoFic();
-        }
-
-        /// <summary>
-        /// Salva as exposições num ficheiro.
-        /// </summary>
-        public void SalvarExposicaoFic()
-        {
-            exposicaoDAL.SalvarExposicaoFic();
         }
     }
 }

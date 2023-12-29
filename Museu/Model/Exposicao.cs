@@ -8,8 +8,10 @@ namespace Museu
     public class Exposicao : Sala
     { 
         public int VisitantesPres  { get; set; }
+
         public List<Arte> ObrasDeArte { get; set; } = new List<Arte>();
         public List<Visitante> Visitantes { get; set; } = new List<Visitante>();
+
 
         public Exposicao(string nome, int capacidade) : base(nome, capacidade)
         {
@@ -81,6 +83,7 @@ namespace Museu
             if (ObraParaRemover != null)
             {
                 ObrasDeArte.Remove(ObraParaRemover);
+
                 Console.WriteLine($"Removido com sucesso");
             }
             else

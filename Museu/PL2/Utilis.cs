@@ -450,6 +450,7 @@ namespace PL
         }
         private void AdicionarArteExpo()
         {
+            exposicaoB.ObterTodasExposicoes();
             Console.WriteLine("Adicionar Arte à Sala\n\n");
             Console.WriteLine("Salas Disponíveis");
             MostrarSalas();
@@ -470,7 +471,7 @@ namespace PL
             // Adiciona a nova exposição ao DAL
             exposicaoB.AdicionarExposicao(exposicao);
             // Grava as alterações no arquivo
-            exposicaoB.SalvarExposicaoFic();
+            exposicaoB.GravarExposicaoFic();
         }
         private void RemoverArteExpo()
         {
