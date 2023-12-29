@@ -21,9 +21,10 @@ namespace PL
 
         
 
-
+        //Menu Inicial
         private protected void Menu1()
         {
+            Console.Clear();
             Console.WriteLine("\nEscolha uma opção:");
             Console.WriteLine("1 - Gerir Salas");
             Console.WriteLine("2 - Gerir Obras de Arte");
@@ -31,7 +32,6 @@ namespace PL
             Console.WriteLine("4 - Gerir Visitantes");
             Console.WriteLine("5 - Sair");
         }
-
         public void Executar1()
         {
             bool sair = false;
@@ -51,7 +51,7 @@ namespace PL
                         Executar4();
                         break;
                     case "4":
-                        //Executar5();
+                        Executar5();
                         break;
                     case "5":
                         sair = true;
@@ -64,8 +64,7 @@ namespace PL
         }
 
 
-
-
+        //Gestão de Salas
         private protected void Menu2()
         {
             Console.WriteLine("Gestão de Salas");
@@ -74,25 +73,32 @@ namespace PL
             Console.WriteLine("3 - Mostrar todas as Salas");
             Console.WriteLine("4 - Sair");
         }
-
         public void Executar2()
         {
             bool sair = false;
+            Console.Clear();
+            Menu2();
             do
             {
                 
-                Menu2();
+                
                 string opcao = Console.ReadLine();
                 switch (opcao)
                 {
                     case "1":
+                        Console.Clear();
                         AdicionarSala();
+                        Menu2();
                         break;
                     case "2":
+                        Console.Clear();
                         RemoverSala();
+                        Menu2();
                         break;
                     case "3":
+                        Console.Clear();
                         MostrarSalas();
+                        Menu2();
                         break;
                     case "4":
                         sair = true;
@@ -104,8 +110,6 @@ namespace PL
                 }
             } while (!sair);
         }
-
-
         private void AdicionarSala()
         {
             Console.WriteLine("Introdução de Salas\n\n");
@@ -119,7 +123,6 @@ namespace PL
             salaB.AdicionarSala(sala);
             salaB.GravarSalaFic(salaB.ObterTodasSalas());
         }
-
         private void RemoverSala()
         {
             Console.WriteLine("Remover Sala\n\n");
@@ -137,8 +140,6 @@ namespace PL
             }
 
         }
-
-
         private void MostrarSalas()
         {
             Console.WriteLine("\nSalas disponíveis:");
@@ -152,7 +153,7 @@ namespace PL
         }
 
 
-
+        //Gestão de obras de arte
         private protected void Menu3()
         {
             Console.WriteLine("Gestão de Obras de Arte\n\n");
@@ -161,27 +162,31 @@ namespace PL
             Console.WriteLine("3 - Mostrar todas as Obras de Arte");
             Console.WriteLine("4 - Sair");
         }
-
         public void Executar3()
         {
             bool sair = false;
+            Console.Clear();
+            Menu3();
             do
             {
-                Menu3();
+                
                 string opcao = Console.ReadLine();
                 switch (opcao)
                 {
                     case "1":
                         Console.Clear();
                         IntroduzirObra();
+                        Menu3();
                         break;
                     case "2":
                         Console.Clear();
                         RemoverObra();
+                        Menu3();
                         break;
                     case "3":
                         Console.Clear();
                         MostrarObrasDeArte();
+                        Menu3();
                         break;
                     case "4":
                         Console.Clear();
@@ -194,7 +199,6 @@ namespace PL
                 }
             } while (!sair);
         }
-
         static void IntroduzirObra()
         {
             Console.WriteLine("Introdução de Obras de arte:\n\n");
@@ -218,7 +222,6 @@ namespace PL
                     break;
             }
         }
-
         static void IntroduzirEscultura()
         {
             Console.WriteLine("Introdução de Esculturas\n\n");
@@ -241,8 +244,6 @@ namespace PL
 
             arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
         }
-
-
         static void IntroduzirPintura()
         {
             Console.WriteLine("Introdução de Pinturas\n\n");
@@ -266,22 +267,6 @@ namespace PL
 
             arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
         }
-
-
-        static void MostrarObrasDeArte()
-        {
-            Console.WriteLine("\nObras de Arte disponíveis:");
-
-            var obras = arteB.CarregarObraFic();
-
-            foreach (Arte obra in obras)
-            {
-                obra.ExibirInfo();
-                Console.WriteLine();
-            }
-
-        }
-
         static void RemoverObra()
         {
             Console.WriteLine("Remover Obra de Arte\n\n");
@@ -300,7 +285,114 @@ namespace PL
             }
 
         }
+        static void MostrarObrasDeArte()
+        {
+            Console.WriteLine("\nObras de Arte disponíveis:");
 
+            var obras = arteB.CarregarObraFic();
+
+            foreach (Arte obra in obras)
+            {
+                obra.ExibirInfo();
+                Console.WriteLine();
+            }
+
+        }
+
+
+        //Gestão de Visitantes
+        private protected void Menu5()      
+        {
+            Console.WriteLine("Gestão de Visitantes");
+            Console.WriteLine("1 - Adicionar Visitante");
+            Console.WriteLine("2 - Remover Visitante");
+            Console.WriteLine("3 - Mostrar todos os visitantes do Museu e motivo");
+            Console.WriteLine("6 - Sair");
+        }
+        public void Executar5()
+        {
+            bool sair = false;
+            Console.Clear();
+            Menu5();
+            do
+            {
+
+                
+                string opcao = Console.ReadLine();
+                switch (opcao)
+                {
+                    case "1":
+                        Console.Clear();
+                        AdicionarVisitantes();
+                        Menu5();
+                        break;
+                    case "2":
+                        Console.Clear();
+                        RemoverVisitantes();
+                        Menu5();
+                        break;
+                    case "3":
+                        Console.Clear();
+                        MostrarVisitantes();
+                        Menu5();
+                        break;
+                    case "6":
+                        sair = true;
+                        Menu1();
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida");
+                        break;
+                }
+            } while (!sair);
+        }
+        private void AdicionarVisitantes()
+        {
+            Console.WriteLine("Introdução de um Visitante\n\n");
+            Console.WriteLine("Nome:");
+            string nome = Console.ReadLine();
+            Console.WriteLine("Idade:");
+            int idade = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Motivo Da Visita:");
+            string motivoVisita = Console.ReadLine();
+
+
+            Visitante visitante = new Visitante(nome, idade, motivoVisita);
+            visitanteB.AdicionarVisitante(visitante);
+            visitanteB.GravarVisitanteFic(visitanteB.ObterTodosVisitantes());
+        }
+        private void RemoverVisitantes()
+        {
+            Console.WriteLine("Remover Visitante\n\n");
+            Console.WriteLine("Visitantes existentes");
+            MostrarVisitantes();
+            Console.WriteLine("Nome do Visitante a Remover:");
+            string nome = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(nome))
+            {
+                visitanteB.RemoverVisitante(nome);
+                visitanteB.GravarVisitanteFic(visitanteB.ObterTodosVisitantes());
+            }
+            else
+            {
+                Console.WriteLine("Nome inválido. Tente novamente.");
+            }
+
+        }
+        private void MostrarVisitantes()
+        {
+            Console.WriteLine("\nVisitantes:");
+            var visitantes = visitanteB.CarregarVisitanteFic();
+
+            foreach (Visitante visitante in visitantes)
+            {
+                visitante.Apresentar();
+                Console.WriteLine();
+            }
+        }
+
+
+        //Gestão de exposições
         private protected void Menu4()
         {
             Console.WriteLine("Gestão de Exposições");
@@ -312,7 +404,6 @@ namespace PL
             Console.WriteLine("6 - Mostras Exposições e Visitantes");
             Console.WriteLine("9 - Sair");
         }
-
         public void Executar4()
         {
             bool sair = false;
@@ -357,10 +448,6 @@ namespace PL
                 }
             } while (!sair);
         }
-
-
-
-
         private void AdicionarArteExpo()
         {
             Console.WriteLine("Adicionar Arte à Sala\n\n");
@@ -386,13 +473,11 @@ namespace PL
             // Grava as alterações no arquivo
             exposicaoB.SalvarExposicaoFic();
         }
-
-
         private void RemoverArteExpo()
         {
             Console.WriteLine("Remover Arte das Exposições");
             Console.WriteLine("Exposições Disponíveis");
-            MostrarExposicoes();
+            MostarExposicoes();
             Console.WriteLine("Nome da Exposição:");
             string nome = Console.ReadLine();
             Console.WriteLine("Obras de Arte Disponíveis");
@@ -417,7 +502,7 @@ namespace PL
         }
 
 
-        public void MostrarExposicoes()
+        public void MostarExposicoes()
         {
             Console.WriteLine("\nExposições disponíveis:");
             var exposicoes = exposicaoB.CarregarExposicaoFic();
@@ -428,20 +513,6 @@ namespace PL
                 Console.WriteLine();
             }
         }
-
-
-
-        private protected void Menu5()      
-        {
-            Console.WriteLine("Gestão de Visitantes");
-            Console.WriteLine("1 - Adicionar Visitante");
-            Console.WriteLine("2 - Remover Visitante");
-            Console.WriteLine("3 - Mostrar todos os visitantes do Museu e motivo");
-            Console.WriteLine("3 - Sair");
-        }
-
-
- 
 
 
 
