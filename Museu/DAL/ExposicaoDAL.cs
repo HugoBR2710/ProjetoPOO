@@ -17,13 +17,8 @@ namespace DAL
         /// </summary>
         public ExposicaoDAL()
         {
-<<<<<<< HEAD
             _exposicoes = new List<Exposicao>();
-=======
-            var json = File.ReadAllText(path);
-            _exposicoes = JsonSerializer.Deserialize<List<Exposicao>>(json);
-            return _exposicoes;
->>>>>>> 047d420e886960f4229536c9183d19d65bbc85f2
+           
         }
 
         /// <summary>
@@ -52,7 +47,6 @@ namespace DAL
         {
             _exposicoes.Remove(exposicao);
         }
-
         /// <summary>
         /// Obtém uma exposição pelo seu nome.
         /// </summary>

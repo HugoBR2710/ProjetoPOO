@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Text.Json.Serialization;
 
 namespace Museu
 {
@@ -10,27 +11,24 @@ namespace Museu
         public List<Arte> ObrasDeArte { get; set; } = new List<Arte>();
         public List<Visitante> Visitantes { get; set; } = new List<Visitante>();
 
-
-
-        //public Exposicao()
-        //{
-
-        //}
-
-        public Exposicao(string nome, int capacidade)
-        : base(nome, capacidade)
+        public Exposicao(string nome, int capacidade) : base(nome, capacidade)
         {
-            
+
         }
 
-        public Exposicao(string nome, int capacidade, List<Arte>obrasDeArte)            
-        : base(nome, capacidade)
+        //O que foi adicionado foi isto devido ao erro de parametros
+        public Exposicao() : base("",0)
+        {
+
+        }
+
+        public Exposicao(string nome, int capacidade, List<Arte>obrasDeArte) : base(nome, capacidade)
         {
             ObrasDeArte = obrasDeArte;
         }
 
-        public Exposicao(string nome, int capacidade, int visitantesPres, List<Arte> obrasDeArte, List<Visitante> visitantes)
-            : base(nome, capacidade)
+        [JsonConstructor]
+        public Exposicao(string nome, int capacidade, int visitantesPres, List<Arte> obrasDeArte, List<Visitante> visitantes) : base(nome, capacidade)
         {
             VisitantesPres = visitantesPres;
             ObrasDeArte = obrasDeArte;
