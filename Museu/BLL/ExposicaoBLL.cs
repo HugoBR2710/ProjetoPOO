@@ -84,4 +84,49 @@ namespace BLL
             exposicaoDAL.SalvarExposicaoFic();
         }
     }
+<<<<<<< HEAD
 }
+=======
+
+    public void AdicionarExposicao(Exposicao exposicao)
+    {
+        exposicaoDAL.AdicionarExposicao(exposicao);
+    }
+
+    public void RemoverExposicao(Exposicao exposicao)
+    {
+        exposicaoDAL.RemoverExposicao(exposicao);
+    }
+
+    public Exposicao ObterExposicaoPorNome(string nome)
+    {
+        return exposicaoDAL.ObterExposicaoPorNome(nome);
+    }
+
+
+    public void AtualizarExposicao(Exposicao exposicao)
+    {
+        exposicaoDAL.AtualizarExposicao(exposicao);
+    }
+
+    public void GravarExposicaoFic(List<Exposicao> _exposicoes)
+    {
+        exposicaoDAL.GravarExposicaoFic(_exposicoes);
+    }
+
+    public List<Exposicao> CarregarExposicaoFic()
+    {
+        return exposicaoDAL.CarregarExposicaoFic();
+    }
+
+
+    public void SalvarExposicaoFic()
+    {
+        exposicaoDAL.SalvarExposicaoFic();
+    }
+
+
+
+
+}
+>>>>>>> 047d420e886960f4229536c9183d19d65bbc85f2

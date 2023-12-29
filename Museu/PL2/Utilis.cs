@@ -431,7 +431,7 @@ namespace PL
                         break;
                     case "5":
                         Console.Clear();
-                        //MostrarExposicoes();
+                        MostrarExposicoes();
                         break;
                     case "6":
                         Console.Clear();
@@ -469,7 +469,6 @@ namespace PL
 
             // Adiciona a nova exposição ao DAL
             exposicaoB.AdicionarExposicao(exposicao);
-
             // Grava as alterações no arquivo
             exposicaoB.SalvarExposicaoFic();
         }
@@ -477,7 +476,7 @@ namespace PL
         {
             Console.WriteLine("Remover Arte das Exposições");
             Console.WriteLine("Exposições Disponíveis");
-            MostarExposicoes();
+            MostrarExposicoes();
             Console.WriteLine("Nome da Exposição:");
             string nome = Console.ReadLine();
             Console.WriteLine("Obras de Arte Disponíveis");
@@ -502,14 +501,14 @@ namespace PL
         }
 
 
-        public void MostarExposicoes()
+        public void MostrarExposicoes()
         {
             Console.WriteLine("\nExposições disponíveis:");
             var exposicoes = exposicaoB.CarregarExposicaoFic();
 
             foreach (Exposicao exposicao in exposicoes)
             {
-                exposicao.ExibirInfo();
+                exposicao.MostraSalaObras();
                 Console.WriteLine();
             }
         }
