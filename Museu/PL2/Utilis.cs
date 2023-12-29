@@ -500,8 +500,6 @@ namespace PL
             // Grava as alterações no arquivo
             exposicaoB.SalvarExposicaoFic();
         }
-
-
         private void RemoverArteExpo()
         {
             Console.WriteLine("Remover Arte das Exposições");
@@ -529,7 +527,6 @@ namespace PL
             }
 
         }
-
         public void MostrarExposicoes()
         {
             Console.WriteLine("\nExposições disponíveis:");
