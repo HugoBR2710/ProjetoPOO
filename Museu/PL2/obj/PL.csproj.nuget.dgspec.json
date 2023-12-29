@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\PL2\\PL.csproj": {}
+    "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\PL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\BLL\\BLL.csproj": {
+    "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\hugos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\BLL\\obj\\",
+        "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hugos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\DAL\\DAL.csproj"
+              "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\DAL\\DAL.csproj"
               }
             }
           }
@@ -59,21 +59,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\DAL\\DAL.csproj": {
+    "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\hugos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hugos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,8 +87,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\Model\\Model.csproj"
+              "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj"
               }
             }
           }
@@ -118,21 +118,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\Model\\Model.csproj": {
+    "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\hugos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\Model\\obj\\",
+        "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hugos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -173,21 +173,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\PL2\\PL.csproj": {
+    "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\PL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\PL2\\PL.csproj",
+        "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\PL.csproj",
         "projectName": "PL",
-        "projectPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\PL2\\PL.csproj",
-        "packagesPath": "C:\\Users\\hugos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\PL2\\obj\\",
+        "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\PL.csproj",
+        "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\PL2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hugos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -201,11 +201,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\BLL\\BLL.csproj"
+              "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\BLL\\BLL.csproj"
               },
-              "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\Model\\Model.csproj"
+              "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\Jorge\\Desktop\\ProjetoPOO\\Museu\\Model\\Model.csproj"
               }
             }
           }
@@ -235,7 +235,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
