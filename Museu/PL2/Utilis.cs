@@ -377,7 +377,7 @@ namespace PL
             Sala sala = salaB.ObterSalaPorNome(nome);
 
             // Cria a nova exposição
-            Exposicao exposicao = Exposicao.ConverterSalaParaExposicao(sala);
+            Exposicao exposicao = new Exposicao(sala.Nome, sala.Capacidade);
             exposicao.AdicionarObraExpo(arte);
 
             // Adiciona a nova exposição ao DAL
@@ -416,17 +416,17 @@ namespace PL
 
         }
 
+
         public void MostrarExposicoes()
         {
             Console.WriteLine("\nExposições disponíveis:");
-            var expos = exposicaoB.CarregarExposicaoFic();
+            var exposicoes = exposicaoB.CarregarExposicaoFic();
 
-            foreach (Exposicao expo in expos)
+            foreach (Exposicao exposicao in exposicoes)
             {
-                expo.ExibirInfo();
+                exposicao.ExibirInfo();
                 Console.WriteLine();
             }
-
         }
 
 
