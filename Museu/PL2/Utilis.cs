@@ -99,7 +99,6 @@ namespace PL
                         Menu2();
                         break;
                     case "3":
-<<<<<<< HEAD
                         Console.Clear();
                         AdicionarArteSala();
                         Menu2();
@@ -111,8 +110,7 @@ namespace PL
                         break;
                     case "5":
                         Console.Clear();
-=======
->>>>>>> a7a892c4af8d00731fa91cc2f67970a2e10a8bfa
+
                         MostrarSalas();
                         Menu2();
                         break;
@@ -220,22 +218,6 @@ namespace PL
             } while (!sair);
         }
 
-<<<<<<< HEAD
-        private protected void Menu4()
-        {
-            Console.WriteLine("Gestão de Exposições");
-            Console.WriteLine("1 - Adicionar Exposição");
-            Console.WriteLine("2 - Remover Exposição");
-            Console.WriteLine("3 - Adicionar Obra de Arte à Exposição");
-            Console.WriteLine("4 - Remover Obra de Arte da Exposição");
-            Console.WriteLine("5 - Definir Capacidade Máxima");
-            Console.WriteLine("6 - Adicionar Visitante à Exposição");
-            Console.WriteLine("7 - Remover Visitante da Exposição");
-            //mostra todas as exposições com número de visitantes e ocupação percentual
-            Console.WriteLine("8 - Mostrar todas as Exposições e número de Visitantes");
-            Console.WriteLine("9 - Sair");
-        }
-
         private protected void Menu5()      
         {
             Console.WriteLine("Gestão de Visitantes");
@@ -330,8 +312,6 @@ namespace PL
             }
         }
 
-=======
->>>>>>> a7a892c4af8d00731fa91cc2f67970a2e10a8bfa
         static void IntroduzirObra()
         {
             Console.WriteLine("Introdução de Obras de arte:\n\n");
@@ -495,9 +475,6 @@ namespace PL
             } while (!sair);
         }
 
-
-
-
         private void AdicionarArteExpo()
         {
             Console.WriteLine("Adicionar Arte à Sala\n\n");
@@ -564,17 +541,6 @@ namespace PL
                 Console.WriteLine();
             }
 
-        }
-
-
-
-        private protected void Menu5()      
-        {
-            Console.WriteLine("Gestão de Visitantes");
-            Console.WriteLine("1 - Adicionar Visitante");
-            Console.WriteLine("2 - Remover Visitante");
-            Console.WriteLine("3 - Mostrar todos os visitantes do Museu e motivo");
-            Console.WriteLine("3 - Sair");
         }
 
 
