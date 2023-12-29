@@ -31,15 +31,15 @@ public class ArteDAL
         return _obrasDeArte.FirstOrDefault(obra => obra.Titulo == nome);
     }
 
-    public Arte ObterObraPorNome(string nome, string tipo)
-    {
-        return _obrasDeArte.FirstOrDefault(obra => obra.Titulo == nome && obra.TipoArte == tipo);
-    }
+    //public Arte ObterObraPorNome(string nome, string tipo)
+    //{
+    //    return _obrasDeArte.FirstOrDefault(obra => obra.Titulo == nome && obra.TipoArte == tipo);
+    //}
 
-    public Arte ObterObraPorNome(string nome, string tipo, string autor)
-    {
-        return _obrasDeArte.FirstOrDefault(obra => obra.Titulo == nome && obra.TipoArte == tipo && obra.Autor == autor);
-    }
+    //public Arte ObterObraPorNome(string nome, string tipo, string autor)
+    //{
+    //    return _obrasDeArte.FirstOrDefault(obra => obra.Titulo == nome && obra.TipoArte == tipo && obra.Autor == autor);
+    //}
 
 
     public Arte ObterObraPorNome(string nome, string tipo, string autor, int ano)

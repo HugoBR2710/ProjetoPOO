@@ -7,6 +7,8 @@ public class SalaBLL
 {
     private SalaDAL salaDAL;
 
+    private static string path = "sala.json";
+
 
     public SalaBLL()
     {
@@ -24,6 +26,12 @@ public class SalaBLL
         salaDAL.AdicionarSala(sala);
     }
 
+    public void RemoverSala(String nome)
+    {
+        salaDAL.RemoverSala(nome);
+    }
+
+
     public void RemoverSala(Sala sala)
     {
         salaDAL.RemoverSala(sala);
@@ -40,6 +48,16 @@ public class SalaBLL
     }
 
 
+    public void GravarSalaFic(List<Sala> _salas)
+    {
+        salaDAL.GravarSalaFic(_salas);
+    }
+
+
+    public List<Sala> CarregarSalaFic()
+    {
+        return salaDAL.CarregarSalaFic();
+    }
 
 
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Museu
 {
@@ -10,6 +11,11 @@ namespace Museu
         public List<Visitante> Visitantes { get; set; } = new List<Visitante>();
 
 
+        public Exposicao(string nome, int capacidade)
+        : base(nome, capacidade)
+        {
+            
+        }
 
         public Exposicao(string nome, int capacidade, List<Arte>obrasDeArte)            
         : base(nome, capacidade)
@@ -68,7 +74,7 @@ namespace Museu
                 Console.WriteLine("Não há visitantes para sair.");
             }
         }
- 
+
         /*
         public void RemoverVisitante(Visitante visitante)
         {
@@ -82,6 +88,19 @@ namespace Museu
             }
         }
         */
+
+        public static Exposicao ConverterSalaParaExposicao(Sala sala)
+        {
+            if (sala is Exposicao exposicao)
+            {
+                return exposicao; // Se já for uma exposição, retorna o mesmo objeto
+            }
+            else
+            {
+                return new Exposicao(sala.Nome, sala.Capacidade);
+            }
+        }
+
 
 
 

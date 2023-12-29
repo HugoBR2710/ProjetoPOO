@@ -16,8 +16,8 @@ namespace PL
         //private PinturaBLL pinturaB;
         static SalaBLL salaB = new SalaBLL();
         static ArteBLL arteB = new ArteBLL();
-        //private ExposicaoBLL exposicaoB;
-        //private VisitanteBLL visitanteB;
+        private ExposicaoBLL exposicaoB = new ExposicaoBLL();
+        private VisitanteBLL visitanteB = new VisitanteBLL();
 
         
 
@@ -88,19 +88,19 @@ namespace PL
                 switch (opcao)
                 {
                     case "1":
-                        //AdicionarSala();
+                        AdicionarSala();
                         break;
                     case "2":
-                        //RemoverSala();
+                        RemoverSala();
                         break;
                     case "3":
-                        //AdicionarArteSala();
+                        AdicionarArteSala();
                         break;
                     case "4":
-                        //RemoverArteSala();
+                        RemoverArteSala();
                         break;
                     case "5":
-                        //MostrarSalas();
+                        MostrarSalas();
                         break;
                     case "6":
                         sair = true;
@@ -112,6 +112,96 @@ namespace PL
                 }
             } while (!sair);
         }
+
+        private void AdicionarArteSala()
+        {
+            Console.WriteLine("Adicionar Arte à Sala\n\n");
+            Console.WriteLine("Salas Disponíveis");
+            MostrarSalas();
+            Console.WriteLine("Nome da Sala:");
+            string nome = Console.ReadLine();
+            Console.WriteLine("Obras de Arte Disponíveis");
+            MostrarObrasDeArte();
+            Console.WriteLine("Título da Obra:");
+            string titulo = Console.ReadLine();
+
+            Arte arte = arteB.ObterObraPorNome(titulo);
+            Sala sala = salaB.ObterSalaPorNome(nome);
+            Exposicao exposicao = Exposicao.ConverterSalaParaExposicao(sala);
+            exposicao.AdicionarObraExpo(arte);
+            salaB.GravarSalaFic(salaB.ObterTodasSalas());
+            
+        }
+
+/// <summary>
+/// 
+/// </summary>
+        private void RemoverArteSala()
+        {
+            Console.WriteLine("Remover Arte da Sala\n\n");
+            Console.WriteLine("Salas Disponíveis");
+            MostrarSalas();
+            Console.WriteLine("Nome da Sala:");
+            string nome = Console.ReadLine();
+            Console.WriteLine("Obras de Arte Disponíveis");
+            MostrarObrasDeArte();
+            Console.WriteLine("Título da Obra:");
+            string titulo = Console.ReadLine();
+
+            Arte arte = arteB.ObterObraPorNome(titulo);
+            Sala sala = salaB.ObterSalaPorNome(nome);
+            Exposicao exposicao = Exposicao.ConverterSalaParaExposicao(sala);
+            exposicao.RemoverObraExpo(arte);
+            salaB.GravarSalaFic(salaB.ObterTodasSalas());
+        }
+
+
+        private void AdicionarSala()
+        {
+            Console.WriteLine("Introdução de Salas\n\n");
+            Console.WriteLine("Nome:");
+            string nome = Console.ReadLine();
+            Console.WriteLine("Capacidade:");
+            int capacidade = Convert.ToInt32(Console.ReadLine());
+           
+
+            Sala sala = new Sala(nome, capacidade);
+            salaB.AdicionarSala(sala);
+            salaB.GravarSalaFic(salaB.ObterTodasSalas());
+        }
+
+        private void RemoverSala()
+        {
+            Console.WriteLine("Remover Sala\n\n");
+            Console.WriteLine("Salas Disponíveis");
+            MostrarSalas();
+            Console.WriteLine("Nome da Sala a Remover:");
+            string nome = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(nome)) 
+            {
+                salaB.RemoverSala(nome);
+            }
+            else
+            {
+                Console.WriteLine("Nome inválido. Tente novamente.");
+            }
+
+        }
+
+
+        private void MostrarSalas()
+        {
+            Console.WriteLine("\nSalas disponíveis:");
+            var salas = salaB.CarregarSalaFic();
+
+            foreach (Sala sala in salas)
+            {
+                sala.ExibirInfo();
+                Console.WriteLine();
+            }
+        }
+
+
 
         private protected void Menu3()
         {
@@ -127,7 +217,6 @@ namespace PL
             bool sair = false;
             do
             {
-                Console.Clear();
                 Menu3();
                 string opcao = Console.ReadLine();
                 switch (opcao)
@@ -275,8 +364,16 @@ namespace PL
             MostrarObrasDeArte();
             Console.WriteLine("Título da Obra a Remover:");
             string titulo = Console.ReadLine();
-
-            arteB.RemoverObra(titulo);
+            try
+            {
+                arteB.RemoverObra(titulo);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Obra Inválida ");
+                throw;
+            }
+            
         }
 
 

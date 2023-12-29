@@ -35,15 +35,6 @@ public class ArteBLL
         return arteDAL.ObterObraPorNome(nome);
     }
 
-    public Arte ObterObraPorNome(string nome, string tipo)
-    {
-        return arteDAL.ObterObraPorNome(nome, tipo);
-    }
-
-    public Arte ObterObraPorNome(string nome, string tipo, string autor)
-    {
-        return arteDAL.ObterObraPorNome(nome, tipo, autor);
-    }
 
     public Arte ObterObraPorNome(string nome, string tipo, string autor, int ano)
     {
@@ -69,7 +60,16 @@ public class ArteBLL
 
     public void RemoverObra(string nome)
     {
-        arteDAL.RemoverObra(nome);
+        try
+        {
+            arteDAL.RemoverObra(nome);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("não foi possível remover a Obra");
+            throw;
+        }
+        
     }
 
 }
