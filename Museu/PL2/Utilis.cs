@@ -467,11 +467,13 @@ namespace PL
             // Cria a nova exposição
             Exposicao exposicao = new Exposicao(sala.Nome, sala.Capacidade);
             exposicao.AdicionarObraExpo(arte);
-
+            salaB.RemoverSala(nome);
+            arteB.RemoverObra(titulo);
             // Adiciona a nova exposição ao DAL
             exposicaoB.AdicionarExposicao(exposicao);
             // Grava as alterações no arquivo
             exposicaoB.SalvarExposicaoFic();
+            salaB.GravarSalaFic(salaB.ObterTodasSalas());
         }
         private void RemoverArteExpo()
         {
@@ -487,6 +489,7 @@ namespace PL
 
             //Arte arte = arteB.ObterObraPorNome(titulo);
             Exposicao exposicao = exposicaoB.ObterExposicaoPorNome(nome);
+
             exposicao.RemoverObraExpo(titulo);
             try
             {
