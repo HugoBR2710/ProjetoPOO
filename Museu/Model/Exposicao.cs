@@ -143,6 +143,18 @@ namespace Museu
             }
         }
 
+        public void MostraExpoVis()
+        {
+            //Console.WriteLine($"Exposição: {Nome}");
+            Console.WriteLine("Visitantes:");
+            foreach (Visitante visitante in Visitantes)
+            {
+                Console.WriteLine(visitante.Nome);
+            }
+            
+        }
+
+
 
 
 
