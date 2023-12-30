@@ -293,8 +293,18 @@ namespace PL
 
             foreach (Arte obra in obras)
             {
-                obra.ExibirInfo();
-                Console.WriteLine();
+                try
+                {
+                    obra.ExibirInfo();
+                    Console.WriteLine();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Não tem obras disponiveis para mostrar");
+                    Console.WriteLine(e.Message);
+                    throw;
+                }
+               
             }
 
         }
@@ -475,6 +485,7 @@ namespace PL
             exposicaoB.SalvarExposicaoFic();
             salaB.GravarSalaFic(salaB.ObterTodasSalas());
         }
+
         private void RemoverArteExpo()
         {
             Console.WriteLine("Remover Arte das Exposições");
@@ -482,13 +493,19 @@ namespace PL
             MostrarExposicoes();
             Console.WriteLine("Nome da Exposição:");
             string nome = Console.ReadLine();
-            Console.WriteLine("Obras de Arte Disponíveis");
-            MostrarObrasDeArte();
-            Console.WriteLine("Título da Obra:");
+            Console.WriteLine("Obras de Arte Existentes");
+            Exposicao exposicao = exposicaoB.ObterExposicaoPorNome(nome);
+
+            
+            MostrarArteExposicao(exposicao);
+            Console.WriteLine("Título da Obra a remover:");
             string titulo = Console.ReadLine();
 
-            //Arte arte = arteB.ObterObraPorNome(titulo);
-            Exposicao exposicao = exposicaoB.ObterExposicaoPorNome(nome);
+            Arte arte = arteB.ObterObraPorNome(titulo);
+            arteB.AdicionarObra(arte);
+            arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
+            
+            
 
             exposicao.RemoverObraExpo(titulo);
             try
@@ -503,6 +520,9 @@ namespace PL
             }
 
         }
+
+
+
         private void AdicionarVisitanteExpo()
         {
             Console.WriteLine("Adicionar Visitante à Sala\n\n");
@@ -576,6 +596,17 @@ namespace PL
                 }
             }
             
+        }
+
+        public void MostrarArteExposicao(Exposicao exposicao)
+        {
+            Console.WriteLine("\nObras de Arte disponíveis:");
+
+            foreach (Arte obra in exposicao.ObrasDeArte)
+            {
+                obra.ExibirInfo();
+                Console.WriteLine();
+            }
         }
 
 

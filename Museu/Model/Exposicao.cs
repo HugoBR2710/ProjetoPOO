@@ -64,17 +64,6 @@ namespace Museu
             }
         }
 
-        //public void RemoverObraExpo(Arte obra)
-        //{
-        //    if (ObrasDeArte.Count > 0)
-        //    {
-        //        ObrasDeArte.Remove(obra);
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("Não há obras de arte para retirar.");
-        //    }
-        //}
 
         public void RemoverObraExpo(string nome)
         {

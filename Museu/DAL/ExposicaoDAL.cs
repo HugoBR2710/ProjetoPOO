@@ -121,5 +121,16 @@ namespace DAL
                 _exposicoes = JsonSerializer.Deserialize<List<Exposicao>>(json);
             }
         }
+
+
+
+
+
+
     }
+
+
+
+
+
 }
