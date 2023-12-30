@@ -73,7 +73,13 @@ namespace DAL
         /// Grava as exposições em um arquivo JSON.
         /// </summary>
         /// <param name="_exposicoes">A lista de exposições a ser gravada.</param>
-        public void GravarExposicaoFic()
+        public void GravarExposicaoFic(List<Exposicao> _exposicoes)
+        {
+            var json = JsonSerializer.Serialize(_exposicoes);
+            File.WriteAllText(path, json);
+        }
+
+        public void SalvarExposicaoFic()
         {
             var json = JsonSerializer.Serialize(_exposicoes);
             File.WriteAllText(path, json);

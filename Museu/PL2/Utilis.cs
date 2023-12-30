@@ -471,7 +471,7 @@ namespace PL
             // Adiciona a nova exposição ao DAL
             exposicaoB.AdicionarExposicao(exposicao);
             // Grava as alterações no arquivo
-            exposicaoB.GravarExposicaoFic();
+            exposicaoB.SalvarExposicaoFic();
         }
         private void RemoverArteExpo()
         {

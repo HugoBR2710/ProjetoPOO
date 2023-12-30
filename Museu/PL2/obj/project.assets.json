@@ -69,11 +69,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\PL2\\PL.csproj",
+      "projectUniqueName": "C:\\Users\\hugos\\source\\repos\\ProjetoPOO\\Museu\\PL2\\PL.csproj",
       "projectName": "PL",
-      "projectPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\PL2\\PL.csproj",
+      "projectPath": "C:\\Users\\hugos\\source\\repos\\ProjetoPOO\\Museu\\PL2\\PL.csproj",
       "packagesPath": "C:\\Users\\hugos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\PL2\\obj\\",
+      "outputPath": "C:\\Users\\hugos\\source\\repos\\ProjetoPOO\\Museu\\PL2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hugos\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -90,11 +90,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\BLL\\BLL.csproj": {
-              "projectPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\BLL\\BLL.csproj"
+            "C:\\Users\\hugos\\source\\repos\\ProjetoPOO\\Museu\\BLL\\BLL.csproj": {
+              "projectPath": "C:\\Users\\hugos\\source\\repos\\ProjetoPOO\\Museu\\BLL\\BLL.csproj"
             },
-            "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\hugos\\Source\\Repos\\ProjetoPOO\\Museu\\Model\\Model.csproj"
+            "C:\\Users\\hugos\\source\\repos\\ProjetoPOO\\Museu\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\hugos\\source\\repos\\ProjetoPOO\\Museu\\Model\\Model.csproj"
             }
           }
         }

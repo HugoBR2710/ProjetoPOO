@@ -1,5 +1,7 @@
 ﻿using DAL;
 using Museu;
+using System.IO;
+using System.Text.Json;
 /// <summary>
 /// Representa a camada de lógica de negócios para gerir exposições.
 /// </summary>
@@ -62,11 +64,15 @@ namespace BLL
         /// Guarda a lista de exposições num ficheiro.
         /// </summary>
         /// <param name="_exposicoes">A lista de exposições a guardar.</param>
-        public void GravarExposicaoFic()
+        public void GravarExposicaoFic(List<Exposicao> _exposicoes)
         {
-            exposicaoDAL.GravarExposicaoFic();
+            exposicaoDAL.GravarExposicaoFic(_exposicoes);
         }
 
+        public void SalvarExposicaoFic()
+        {
+            exposicaoDAL.SalvarExposicaoFic();
+        }
         /// <summary>
         /// Carrega a lista de exposições a partir do ficheiro.
         /// </summary>
