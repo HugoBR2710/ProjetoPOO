@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json.Serialization.Metadata;
@@ -401,7 +402,6 @@ namespace PL
             }
         }
 
-
         //Gestão de exposições
         private protected void Menu4()
         {
@@ -508,6 +508,7 @@ namespace PL
             
 
             exposicao.RemoverObraExpo(titulo);
+
             try
             {
                 exposicaoB.GravarExposicaoFic(exposicaoB.ObterTodasExposicoes());
@@ -526,24 +527,21 @@ namespace PL
         private void AdicionarVisitanteExpo()
         {
             Console.WriteLine("Adicionar Visitante à Sala\n\n");
-            Console.WriteLine("Salas Disponíveis");
-            MostrarSalas();
-            Console.WriteLine("Nome da Sala:");
-            string nomeSala = Console.ReadLine();
+            Console.WriteLine("Exposições Disponíveis");
+            MostrarExposicoes();
+            Console.WriteLine("Nome da Exposição:");
+            string exposicao = Console.ReadLine();
             Console.WriteLine("Visitantes existentes");
             MostrarVisitantes();
             Console.WriteLine("Nome do Visitante:");
-            string nome = Console.ReadLine();
+            string nomeVis = Console.ReadLine();
 
-            Visitante visitante = visitanteB.ObterVisitantePorNome(nome);
-            Sala sala = salaB.ObterSalaPorNome(nomeSala);
+            Visitante visitante = visitanteB.ObterVisitantePorNome(nomeVis);
+            Exposicao exposicaoNome = exposicaoB.ObterExposicaoPorNome(exposicao);
 
             // Adicionar vistante à exposição
-            Exposicao exposicao = new Exposicao(sala.Nome, sala.Capacidade);
-            exposicao.AdicionarVisitanteExpo(visitante);
+            exposicaoNome.AdicionarVisitanteExpo(visitante);
 
-            // Adiciona a nova exposição ao DAL
-            exposicaoB.AdicionarExposicao(exposicao);
             // Grava as alterações no arquivo
             exposicaoB.SalvarExposicaoFic();
 
@@ -573,9 +571,8 @@ namespace PL
                 Console.WriteLine("Ocorreu um erro ao tentar gravar a exposição no arquivo.");
                 Console.WriteLine(ex.Message);
             }
-
-
         }
+
         public void MostrarExposicoes()
         {
             var exposicoes = exposicaoB.CarregarExposicaoFic();
@@ -592,6 +589,7 @@ namespace PL
                 foreach (Exposicao exposicao in exposicoes)
                 {
                     exposicao.MostraSalaObras();
+                    exposicao.MostraExpoVis();
                     Console.WriteLine();
                 }
             }
@@ -608,8 +606,5 @@ namespace PL
                 Console.WriteLine();
             }
         }
-
-
-
     }
 }

@@ -1,1 +1,1 @@
-[{"VisitantesPres":0,"ObrasDeArte":[],"Visitantes":[],"Nome":"10","Capacidade":10},{"VisitantesPres":0,"ObrasDeArte":[],"Visitantes":[],"Nome":"11","Capacidade":11}]
+[{"VisitantesPres":0,"ObrasDeArte":[{"Titulo":"1","TipoArte":"Escultura","AnoCriacao":1,"Autor":"1"},{"Titulo":"2","TipoArte":"Escultura","AnoCriacao":2,"Autor":"2"}],"Visitantes":[{"MotivoVisita":"Ver","Nome":"Jorge","Idade":29,"Morada":null},{"MotivoVisita":"Aprender","Nome":"Hugo","Idade":22,"Morada":null}],"Nome":"a","Capacidade":10}]

@@ -59,6 +59,7 @@ namespace DAL
             return _exposicoes.FirstOrDefault(exposicao => exposicao.Nome == nome);
         }
 
+
         /// <summary>
         /// Atualiza uma exposição existente com novas informações.
         /// </summary>
