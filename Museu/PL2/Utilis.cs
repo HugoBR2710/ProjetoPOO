@@ -504,10 +504,13 @@ namespace PL
             string titulo = Console.ReadLine();
 
             Arte arte = arteB.ObterObraPorNome(titulo);
-            Exposicao exposicao = exposicaoB.ObterExposicaoPorNome(nome);
+            //Exposicao exposicao = exposicaoB.ObterExposicaoPorNome(nome);
 
-            // Adiciona a nova exposição ao DAL
-            exposicao.AdicionarObraExpo(arte);
+            //Adiciona a nova exposição ao BLL
+            exposicaoB.AdicionarObraExpo(arte, nome);
+
+            
+            //exposicao.AdicionarObraExpo(arte);
             arteB.RemoverObra(titulo);
             // Grava as alterações no arquivo
             exposicaoB.SalvarExposicaoFic();
@@ -524,18 +527,23 @@ namespace PL
             Console.WriteLine("Obras de Arte Existentes");
             Exposicao exposicao = exposicaoB.ObterExposicaoPorNome(nome);
 
-            
             MostrarArteExposicao(exposicao);
             Console.WriteLine("Título da Obra a remover:");
             string titulo = Console.ReadLine();
 
+            exposicaoB.RemoverObraExpo(titulo, nome);
+
+
+            arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
+
+            //tentativa de a obra ser adicionada de novo ao Acervo
             Arte arte = arteB.ObterObraPorNome(titulo);
             arteB.AdicionarObra(arte);
             arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
             
             
-
-            exposicao.RemoverObraExpo(titulo);
+            //retirado porque comunicava diretamente com a Classe
+            //exposicao.RemoverObraExpo(titulo);
 
             try
             {
@@ -566,6 +574,11 @@ namespace PL
 
             exposicaoB.AdicionarVisitanteExpo(visitanteB.ObterVisitantePorNome(nomeVis), exposicao);
             
+            
+            //colocar o visitante invisivel em vez de o eliminar
+            visitanteB.RemoverVisitante(nomeVis);
+
+
            // Visitante visitante = visitanteB.ObterVisitantePorNome(nomeVis);
            // Exposicao exposicaoNome = exposicaoB.ObterExposicaoPorNome(exposicao);
            
@@ -624,8 +637,8 @@ namespace PL
                 foreach (Exposicao exposicao in exposicoes)
                 {
                     exposicao.MostraSalaObras();
-                    exposicao.MostraExpoVis();
-                    Console.WriteLine("/n");
+                    //exposicao.MostraExpoVis();
+                    Console.WriteLine("\n");
                 }
             }
             
@@ -637,7 +650,7 @@ namespace PL
             foreach (Exposicao exposicao in exposicoes)
             {
                 exposicao.MostraNome();
-                Console.WriteLine("/n");
+                Console.WriteLine("\n");
             }
         }
 
@@ -647,12 +660,12 @@ namespace PL
             var exposicoes = exposicaoB.CarregarExposicaoFic();
             if (exposicoes == null)
             {
-                Console.WriteLine("Não há exposições disponíveis");
+                Console.WriteLine("Não há exposições disponíveis\n");
 
             }
             else
             {
-                Console.WriteLine("\nExposições disponíveis:");
+                Console.WriteLine("\nExposições disponíveis: \n");
 
 
                 foreach (Exposicao exposicao in exposicoes)
