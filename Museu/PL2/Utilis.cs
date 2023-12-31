@@ -406,13 +406,14 @@ namespace PL
         private protected void Menu4()
         {
             Console.WriteLine("Gestão de Exposições");
-            Console.WriteLine("1 - Adicionar Obra de Arte à Exposição");
-            Console.WriteLine("2 - Remover Obra de Arte da Exposição");
-            Console.WriteLine("3 - Adicionar Visitante à Exposição");
-            Console.WriteLine("4 - Remover Visitante da Exposição");
-            Console.WriteLine("5 - Mostrar todas as Exposições, e Obras Expostas");
-            Console.WriteLine("6 - Mostras Exposições e Visitantes");
-            Console.WriteLine("9 - Sair");
+            Console.WriteLine("1 - Adicionar Obra de Arte à Sala");
+            Console.WriteLine("2 - Adicionar Obra de Arte à Exposição");
+            Console.WriteLine("3 - Remover Obra de Arte da Exposição");
+            Console.WriteLine("4 - Adicionar Visitante à Exposição");
+            Console.WriteLine("5 - Remover Visitante da Exposição");
+            Console.WriteLine("6 - Mostrar todas as Exposições, e Obras Expostas");
+            Console.WriteLine("7 - Mostras Exposições e Visitantes");
+            Console.WriteLine("8 - Sair");
         }
         public void Executar4()
         {
@@ -425,29 +426,33 @@ namespace PL
                 {
                     case "1":
                         Console.Clear();
-                        AdicionarArteExpo();
+                        AdicionarArteSala();
                         break;
                     case "2":
                         Console.Clear();
-                        RemoverArteExpo();
+                        AdicionarArteExpo();
                         break;
                     case "3":
                         Console.Clear();
-                        AdicionarVisitanteExpo();
+                        RemoverArteExpo();
                         break;
                     case "4":
                         Console.Clear();
-                        RemoverVisitanteExpo();
+                        AdicionarVisitanteExpo();
                         break;
                     case "5":
                         Console.Clear();
-                        MostrarExposicoes();
+                        RemoverVisitanteExpo();
                         break;
                     case "6":
                         Console.Clear();
-                        //MostrarExposicoesVisitantes();
+                        MostrarExposicoesObras();
                         break;
-                    case "9":
+                    case "7":
+                        Console.Clear();
+                        MostrarExposicoesVisitantes();
+                        break;
+                    case "8":
                         Console.Clear();
                         sair = true;
                         Menu1();
@@ -458,7 +463,7 @@ namespace PL
                 }
             } while (!sair);
         }
-        private void AdicionarArteExpo()
+        private void AdicionarArteSala()
         {
             exposicaoB.ObterTodasExposicoes();
             Console.WriteLine("Adicionar Arte à Sala\n\n");
@@ -486,11 +491,34 @@ namespace PL
             salaB.GravarSalaFic(salaB.ObterTodasSalas());
         }
 
+        private void AdicionarArteExpo()
+        {
+            Console.WriteLine("Adicionar Arte à Exposição\n\n");
+            Console.WriteLine("Exposições Disponíveis");
+            MostrarExposicoesObras();
+            Console.WriteLine("Nome da Exposição:");
+            string nome = Console.ReadLine();
+            Console.WriteLine("Obras de Arte Disponíveis");
+            MostrarObrasDeArte();
+            Console.WriteLine("Título da Obra:");
+            string titulo = Console.ReadLine();
+
+            Arte arte = arteB.ObterObraPorNome(titulo);
+            Exposicao exposicao = exposicaoB.ObterExposicaoPorNome(nome);
+
+            // Adiciona a nova exposição ao DAL
+            exposicao.AdicionarObraExpo(arte);
+            arteB.RemoverObra(titulo);
+            // Grava as alterações no arquivo
+            exposicaoB.SalvarExposicaoFic();
+            arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
+        }
+
         private void RemoverArteExpo()
         {
             Console.WriteLine("Remover Arte das Exposições");
             Console.WriteLine("Exposições Disponíveis");
-            MostrarExposicoes();
+            MostrarExposicoesObras();
             Console.WriteLine("Nome da Exposição:");
             string nome = Console.ReadLine();
             Console.WriteLine("Obras de Arte Existentes");
@@ -533,19 +561,22 @@ namespace PL
             string exposicao = Console.ReadLine();
             Console.WriteLine("Visitantes existentes");
             MostrarVisitantes();
-            Console.WriteLine("Nome do Visitante:");
+            Console.WriteLine("Nome do Visitante a adicionar:");
             string nomeVis = Console.ReadLine();
 
-            Visitante visitante = visitanteB.ObterVisitantePorNome(nomeVis);
-            Exposicao exposicaoNome = exposicaoB.ObterExposicaoPorNome(exposicao);
-
-            // Adicionar vistante à exposição
-            exposicaoNome.AdicionarVisitanteExpo(visitante);
-
-            // Grava as alterações no arquivo
+            exposicaoB.AdicionarVisitanteExpo(visitanteB.ObterVisitantePorNome(nomeVis), exposicao);
+            
+           // Visitante visitante = visitanteB.ObterVisitantePorNome(nomeVis);
+           // Exposicao exposicaoNome = exposicaoB.ObterExposicaoPorNome(exposicao);
+           
+           // Adicionar vistante à exposição
+           //exposicaoNome.AdicionarVisitanteExpo(visitante);
+           
+           
+           // Grava as alterações no arquivo
             exposicaoB.SalvarExposicaoFic();
-
         }
+
         private void RemoverVisitanteExpo()
         {
             Console.WriteLine("Remover Visitante das Exposições");
@@ -553,14 +584,18 @@ namespace PL
             MostrarExposicoes();
             Console.WriteLine("Nome da Exposição:");
             string nome = Console.ReadLine();
+            Console.WriteLine($"Exposição {nome}");
             Console.WriteLine("Visitantes Existentes");
             MostrarVisitantes();
-            Console.WriteLine("Nome do visitante:");
+            Console.WriteLine("Nome do visitante a remover:");
             string nomeVisitante = Console.ReadLine();
 
-            Visitante visitante = visitanteB.ObterVisitantePorNome(nomeVisitante);
-            Exposicao exposicao = exposicaoB.ObterExposicaoPorNome(nome);
-            exposicao.RemoverVisitanteExpo(nomeVisitante);
+
+            exposicaoB.RemoverVisitanteExpo(nomeVisitante, nome);
+
+            //Visitante visitante = visitanteB.ObterVisitantePorNome(nomeVisitante);
+            //Exposicao exposicao = exposicaoB.ObterExposicaoPorNome(nome);
+            //exposicao.RemoverVisitanteExpo(nomeVisitante);
             try
             {
                 exposicaoB.GravarExposicaoFic(exposicaoB.ObterTodasExposicoes());
@@ -573,7 +608,7 @@ namespace PL
             }
         }
 
-        public void MostrarExposicoes()
+        public void MostrarExposicoesObras()
         {
             var exposicoes = exposicaoB.CarregarExposicaoFic();
             if(exposicoes == null)
@@ -590,11 +625,49 @@ namespace PL
                 {
                     exposicao.MostraSalaObras();
                     exposicao.MostraExpoVis();
-                    Console.WriteLine();
+                    Console.WriteLine("/n");
                 }
             }
             
         }
+
+        public void MostrarExposicoes()
+        {
+            var exposicoes = exposicaoB.CarregarExposicaoFic();
+            foreach (Exposicao exposicao in exposicoes)
+            {
+                exposicao.MostraNome();
+                Console.WriteLine("/n");
+            }
+        }
+
+
+        public void MostrarExposicoesVisitantes()
+        {
+            var exposicoes = exposicaoB.CarregarExposicaoFic();
+            if (exposicoes == null)
+            {
+                Console.WriteLine("Não há exposições disponíveis");
+
+            }
+            else
+            {
+                Console.WriteLine("\nExposições disponíveis:");
+
+
+                foreach (Exposicao exposicao in exposicoes)
+                {
+                    exposicao.MostraExpoVis() ;
+                    Console.WriteLine();
+                }
+
+                
+            }
+        }
+
+
+
+
 
         public void MostrarArteExposicao(Exposicao exposicao)
         {

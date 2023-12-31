@@ -1,6 +1,7 @@
 ﻿using DAL;
 using Museu;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Text.Json;
 /// <summary>
 /// Representa a camada de lógica de negócios para gerir exposições.
@@ -81,5 +82,31 @@ namespace BLL
         {
             return exposicaoDAL.CarregarExposicaoFic();
         }
+
+        //Teste abaixo desta linha 
+        //tudo testes não considerar pf
+        public void AdicionarObraExpo(Arte obra, string nomeExpo)
+        {
+            exposicaoDAL.AdicionarObraExpo(obra, nomeExpo);
+        }
+
+        public void AdicionarVisitanteExpo(Visitante visitante, string nomeExpo)
+        {
+            exposicaoDAL.AdicionarVisitanteExpo(visitante, nomeExpo);
+        }
+
+        public void RemoverVisitanteExpo(string nomeVisitante, string nomeExpo)
+        {
+            exposicaoDAL.RemoverVisitanteExpo(nomeVisitante, nomeExpo);
+        }
+
+        public void RemoverObraExpo(string nomeObra, string nomeExpo)
+        {
+            exposicaoDAL.RemoverObraExpo(nomeObra, nomeExpo);
+        }
+
+
+
+
     }
 }

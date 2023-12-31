@@ -51,17 +51,6 @@ namespace DAL
         }
 
 
-        //public Arte ObterObraPorNome(string nome, string tipo)
-        //{
-        //    return _obrasDeArte.FirstOrDefault(obra => obra.Titulo == nome && obra.TipoArte == tipo);
-        //}
-
-        //public Arte ObterObraPorNome(string nome, string tipo, string autor)
-        //{
-        //    return _obrasDeArte.FirstOrDefault(obra => obra.Titulo == nome && obra.TipoArte == tipo && obra.Autor == autor);
-        //}
-
-
         /// <summary>
         /// Obtém uma obra de arte pelo seu nome, tipo, autor e ano de criação.
         /// </summary>

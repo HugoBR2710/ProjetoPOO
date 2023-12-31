@@ -143,6 +143,11 @@ namespace Museu
             
         }
 
+        public void MostraNome()
+        {
+            Console.WriteLine($"Exposição: {Nome}");
+        }
+
 
 
 

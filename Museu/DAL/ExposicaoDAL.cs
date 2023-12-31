@@ -126,6 +126,34 @@ namespace DAL
 
 
 
+        //para baixo desta linha tudo TESTE
+        // não considerar
+        public void AdicionarObraExpo(Arte obra, string nomeExpo)
+        {
+            Exposicao exposicao = ObterExposicaoPorNome(nomeExpo);
+            exposicao.AdicionarObraExpo(obra);
+        }
+
+
+
+        public void AdicionarVisitanteExpo(Visitante visitante, string nomeExpo)
+        {
+            Exposicao exposicao = ObterExposicaoPorNome(nomeExpo);
+            exposicao.AdicionarVisitanteExpo(visitante);
+        }
+
+        public void RemoverVisitanteExpo(string nome, string nomeExpo)
+        {
+            Exposicao exposicao = ObterExposicaoPorNome(nomeExpo);
+            exposicao.RemoverVisitanteExpo(nome);
+        }
+
+        public void RemoverObraExpo(string nome, string nomeExpo)
+        {
+            Exposicao exposicao = ObterExposicaoPorNome(nomeExpo);
+            exposicao.RemoverObraExpo(nome);
+        }
+
 
 
     }
