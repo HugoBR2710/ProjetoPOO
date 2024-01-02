@@ -46,7 +46,15 @@ namespace Museu
 
         public void AdicionarVisitanteExpo(Visitante visitante)
         {
-            Visitantes.Add(visitante);
+            if (Visitantes.Count < Capacidade)
+            {
+                Visitantes.Add(visitante);
+                VisitantesPres++;
+            }
+            else
+            {
+                Console.WriteLine("Capacidade máxima atingida. Não podem entrar mais visitantes.");
+            }
         }
 
         public void RemoverVisitanteExpo(string nome)
@@ -57,6 +65,7 @@ namespace Museu
             {
                 Visitantes.Remove(visitante);
                 Console.WriteLine($"Visitante {nome} Removido com sucesso");
+                VisitantesPres--;
             }
             else
             {
