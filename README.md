@@ -11,5 +11,5 @@ Projeto que pressupõe o desenvolvimento de um software de gestão de um Museu e
 (Diagrama de Classes Final)
 
 ![Imagem1](https://github.com/HugoBR2710/ProjetoPOO/assets/148585987/142cbaa0-0635-4c4f-a8c2-0239aa13b467)
-(Arquitetura NTier Utilizada)
+(Arquitetura de Aplicação Utilizada)
 
