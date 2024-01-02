@@ -1,0 +1,11 @@
+digraph "BLL.SalaBLL.AdicionarSala"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="BLL.SalaBLL.AdicionarSala",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Adiciona uma nova sala à coleção."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="DAL.SalaDAL.AdicionarSala",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_d_a_l_1_1_sala_d_a_l.html#ad14c5ff726865b65245c6d7d0c217876",tooltip="Adiciona uma nova sala à coleção."];
+}
