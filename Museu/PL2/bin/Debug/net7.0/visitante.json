@@ -1,1 +1,23 @@
-[{"MotivoVisita":"Ler","Nome":"Jo\u00E3o","Idade":22,"Morada":null}]
+[
+    {"MotivoVisita":"Ver","Nome":"Jorge","Idade":29,"Morada":null},
+    {"MotivoVisita":"Ler","Nome":"Jo\u00E3o","Idade":22,"Morada":null},
+    {"MotivoVisita":"Aprender","Nome":"Hugo","Idade":22,"Morada":null},
+    {"MotivoVisita": "Explorar", "Nome": "Maria", "Idade": 35, "Morada": null},
+    {"MotivoVisita": "Descobrir", "Nome": "Pedro", "Idade": 28, "Morada": null},
+    {"MotivoVisita": "Apreciar", "Nome": "Ana", "Idade": 30, "Morada": null},
+    {"MotivoVisita": "Conhecer", "Nome": "Luísa", "Idade": 25, "Morada": null},
+    {"MotivoVisita": "Desfrutar", "Nome": "Ricardo", "Idade": 31, "Morada": null},
+    {"MotivoVisita": "Estudar", "Nome": "Carla", "Idade": 27, "Morada": null},
+    {"MotivoVisita": "Observar", "Nome": "Miguel", "Idade": 26, "Morada": null},
+    {"MotivoVisita": "Aprender", "Nome": "Sofia", "Idade": 29, "Morada": null},
+    {"MotivoVisita": "Apreciar Arte", "Nome": "Tiago", "Idade": 32, "Morada": null},
+    {"MotivoVisita": "Explorar", "Nome": "Lúcia", "Idade": 33, "Morada": null},
+    {"MotivoVisita": "Aprender", "Nome": "André", "Idade": 23, "Morada": null},
+    {"MotivoVisita": "Apreciar", "Nome": "Beatriz", "Idade": 28, "Morada": null},
+    {"MotivoVisita": "Conhecer", "Nome": "Hélia", "Idade": 26, "Morada": null},
+    {"MotivoVisita": "Desfrutar", "Nome": "Carlos", "Idade": 30, "Morada": null},
+    {"MotivoVisita": "Estudar", "Nome": "Eva", "Idade": 29, "Morada": null},
+    {"MotivoVisita": "Observar", "Nome": "Rui", "Idade": 25, "Morada": null},
+    {"MotivoVisita": "Aprender", "Nome": "Mariana", "Idade": 27, "Morada": null},
+    {"MotivoVisita": "Apreciar Arte", "Nome": "Gonçalo", "Idade": 31, "Morada": null}
+]
