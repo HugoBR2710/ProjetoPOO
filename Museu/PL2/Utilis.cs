@@ -13,8 +13,6 @@ namespace PL
 {
     internal class Utilis
     {
-        //private EsculturaBLL esculturaB;
-        //private PinturaBLL pinturaB;
         static SalaBLL salaB = new SalaBLL();
         static ArteBLL arteB = new ArteBLL();
         private ExposicaoBLL exposicaoB = new ExposicaoBLL();
@@ -318,7 +316,7 @@ namespace PL
             Console.WriteLine("1 - Adicionar Visitante");
             Console.WriteLine("2 - Remover Visitante");
             Console.WriteLine("3 - Mostrar todos os visitantes do Museu e motivo");
-            Console.WriteLine("6 - Sair");
+            Console.WriteLine("4 - Sair");
         }
         public void Executar5()
         {
@@ -327,8 +325,6 @@ namespace PL
             Menu5();
             do
             {
-
-                
                 string opcao = Console.ReadLine();
                 switch (opcao)
                 {
@@ -347,7 +343,7 @@ namespace PL
                         MostrarVisitantes();
                         Menu5();
                         break;
-                    case "6":
+                    case "4":
                         sair = true;
                         Menu1();
                         break;
@@ -418,39 +414,47 @@ namespace PL
         public void Executar4()
         {
             bool sair = false;
+            Console.Clear();
+            Menu4();
             do
             {
-                Menu4();
                 string opcao = Console.ReadLine();
                 switch (opcao)
                 {
                     case "1":
                         Console.Clear();
                         AdicionarArteSala();
+                        Menu4();
                         break;
                     case "2":
                         Console.Clear();
                         AdicionarArteExpo();
+                        Menu4();
                         break;
                     case "3":
                         Console.Clear();
                         RemoverArteExpo();
+                        Menu4();
                         break;
                     case "4":
                         Console.Clear();
                         AdicionarVisitanteExpo();
+                        Menu4();
                         break;
                     case "5":
                         Console.Clear();
                         RemoverVisitanteExpo();
+                        Menu4();
                         break;
                     case "6":
                         Console.Clear();
                         MostrarExposicoesObras();
+                        Menu4();
                         break;
                     case "7":
                         Console.Clear();
                         MostrarExposicoesVisitantes();
+                        Menu4();
                         break;
                     case "8":
                         Console.Clear();
@@ -482,6 +486,7 @@ namespace PL
             // Cria a nova exposição
             Exposicao exposicao = new Exposicao(sala.Nome, sala.Capacidade);
             exposicao.AdicionarObraExpo(arte);
+            // Eimina a sala e a obra da lista
             salaB.RemoverSala(nome);
             arteB.RemoverObra(titulo);
             // Adiciona a nova exposição ao DAL
@@ -504,14 +509,10 @@ namespace PL
             string titulo = Console.ReadLine();
 
             Arte arte = arteB.ObterObraPorNome(titulo);
-            //Exposicao exposicao = exposicaoB.ObterExposicaoPorNome(nome);
-
             //Adiciona a nova exposição ao BLL
             exposicaoB.AdicionarObraExpo(arte, nome);
-
-            
-            //exposicao.AdicionarObraExpo(arte);
             arteB.RemoverObra(titulo);
+
             // Grava as alterações no arquivo
             exposicaoB.SalvarExposicaoFic();
             arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
@@ -532,18 +533,7 @@ namespace PL
             string titulo = Console.ReadLine();
 
             exposicaoB.RemoverObraExpo(titulo, nome);
-
-
             arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
-
-            //tentativa de a obra ser adicionada de novo ao Acervo
-            Arte arte = arteB.ObterObraPorNome(titulo);
-            arteB.AdicionarObra(arte);
-            arteB.GravarObraFic(arteB.ObterTodasObrasDeArte());
-            
-            
-            //retirado porque comunicava diretamente com a Classe
-            //exposicao.RemoverObraExpo(titulo);
 
             try
             {
@@ -573,21 +563,11 @@ namespace PL
             string nomeVis = Console.ReadLine();
 
             exposicaoB.AdicionarVisitanteExpo(visitanteB.ObterVisitantePorNome(nomeVis), exposicao);
-            
-            
-            //colocar o visitante invisivel em vez de o eliminar
+            //remove o visitante da lista
             visitanteB.RemoverVisitante(nomeVis);
-
-
-           // Visitante visitante = visitanteB.ObterVisitantePorNome(nomeVis);
-           // Exposicao exposicaoNome = exposicaoB.ObterExposicaoPorNome(exposicao);
-           
-           // Adicionar vistante à exposição
-           //exposicaoNome.AdicionarVisitanteExpo(visitante);
-           
-           
            // Grava as alterações no arquivo
             exposicaoB.SalvarExposicaoFic();
+            visitanteB.GravarVisitanteFic(visitanteB.ObterTodosVisitantes());
         }
 
         private void RemoverVisitanteExpo()
@@ -603,12 +583,7 @@ namespace PL
             Console.WriteLine("Nome do visitante a remover:");
             string nomeVisitante = Console.ReadLine();
 
-
             exposicaoB.RemoverVisitanteExpo(nomeVisitante, nome);
-
-            //Visitante visitante = visitanteB.ObterVisitantePorNome(nomeVisitante);
-            //Exposicao exposicao = exposicaoB.ObterExposicaoPorNome(nome);
-            //exposicao.RemoverVisitanteExpo(nomeVisitante);
             try
             {
                 exposicaoB.GravarExposicaoFic(exposicaoB.ObterTodasExposicoes());
@@ -637,7 +612,6 @@ namespace PL
                 foreach (Exposicao exposicao in exposicoes)
                 {
                     exposicao.MostraSalaObras();
-                    //exposicao.MostraExpoVis();
                     Console.WriteLine("\n");
                 }
             }
