@@ -9,15 +9,20 @@ Objetivos
 -	Potenciar a experiência no desenvolvimento de software;
 -	Assimilar o conteúdo da Unidade Curricular.
 
+##
  
-
+### Draft de um modelo UML inicial
 ![Museu](https://github.com/HugoBR2710/ProjetoPOO/assets/148585987/ccdf99a6-5705-450c-9766-83a6655a52f4)
-(draft de um modelo UML inicial)
 
+
+##
+### Diagrama de Classes Final
 ![Class Diagram1](https://github.com/HugoBR2710/ProjetoPOO/assets/148585987/d384f4c7-d89b-41fc-9256-7bc8221d7108)
-(Diagrama de Classes Final)
 
+
+##
+### Arquitetura de Aplicação Utilizada
 ![Imagem1](https://github.com/HugoBR2710/ProjetoPOO/assets/148585987/142cbaa0-0635-4c4f-a8c2-0239aa13b467)
-(Arquitetura de Aplicação Utilizada)
 
-###
+
+
