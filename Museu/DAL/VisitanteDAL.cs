@@ -49,7 +49,6 @@ namespace DAL
             if (visitanteParaRemover != null)
             {
                 _visitantes.Remove(visitanteParaRemover);
-                Console.WriteLine($"Visitante '{nome}' removido com sucesso.");
             }
             else
             {

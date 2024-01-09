@@ -378,6 +378,7 @@ namespace PL
             if (!string.IsNullOrWhiteSpace(nome))
             {
                 visitanteB.RemoverVisitante(nome);
+                Console.WriteLine($"Visitante {nome} saiu do Museu");
                 visitanteB.GravarVisitanteFic(visitanteB.ObterTodosVisitantes());
             }
             else
@@ -564,7 +565,15 @@ namespace PL
 
             exposicaoB.AdicionarVisitanteExpo(visitanteB.ObterVisitantePorNome(nomeVis), exposicao);
             //remove o visitante da lista
-            visitanteB.RemoverVisitante(nomeVis);
+            if (exposicaoB.ObterExposicaoPorNome(exposicao).Visitantes.Count == exposicaoB.ObterExposicaoPorNome(exposicao).Capacidade)
+            {
+                Console.WriteLine("Procure outra Exposição para visitar");
+            }
+            else
+            {
+                visitanteB.RemoverVisitante(nomeVis);
+                Console.WriteLine($"Visitante '{nomeVis}' entrou na Exposição");
+            }
            // Grava as alterações no arquivo
             exposicaoB.SalvarExposicaoFic();
             visitanteB.GravarVisitanteFic(visitanteB.ObterTodosVisitantes());
@@ -573,13 +582,10 @@ namespace PL
         private void RemoverVisitanteExpo()
         {
             Console.WriteLine("Remover Visitante das Exposições");
-            Console.WriteLine("Exposições Disponíveis");
-            MostrarExposicoes();
+            Console.WriteLine("Exposições e Respectiva Ocupação");
+            MostrarExposicoesVisitantes();
             Console.WriteLine("Nome da Exposição:");
             string nome = Console.ReadLine();
-            Console.WriteLine($"Exposição {nome}");
-            Console.WriteLine("Visitantes Existentes");
-            MostrarVisitantes();
             Console.WriteLine("Nome do visitante a remover:");
             string nomeVisitante = Console.ReadLine();
 

@@ -53,7 +53,7 @@ namespace Museu
             }
             else
             {
-                Console.WriteLine("Capacidade máxima atingida. Não podem entrar mais visitantes.");
+                Console.WriteLine($"Capacidade máxima de {Capacidade} atingida. Não podem entrar mais visitantes.");
             }
         }
 
@@ -143,8 +143,8 @@ namespace Museu
 
         public void MostraExpoVis()
         {
-            Console.WriteLine($"Exposição: {Nome}");
-            Console.WriteLine("Visitantes:");
+            Console.WriteLine($"Exposição:\n{Nome}");
+            Console.WriteLine("\nVisitantes:");
             foreach (Visitante visitante in Visitantes)
             {
                 Console.WriteLine(visitante.Nome);

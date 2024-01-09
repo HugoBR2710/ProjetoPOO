@@ -139,7 +139,15 @@ namespace DAL
         public void AdicionarVisitanteExpo(Visitante visitante, string nomeExpo)
         {
             Exposicao exposicao = ObterExposicaoPorNome(nomeExpo);
-            exposicao.AdicionarVisitanteExpo(visitante);
+            try
+            {
+                exposicao.AdicionarVisitanteExpo(visitante);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Visitante não adicionado {e.Message}" );
+            }
+            
         }
 
         public void RemoverVisitanteExpo(string nome, string nomeExpo)
